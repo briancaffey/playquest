@@ -21,6 +21,6 @@ urlpatterns = [
 
     #playquest
     url(r'^', include('plqst.urls', namespace='plqst')),
-    url(r'^api', include('plqst.urls', namespace='plqst_api')),
+    #url(r'^api', include('plqst.urls', namespace='plqst_api')),
 
 ]

@@ -13,8 +13,8 @@ urlpatterns = [
 		## To Do
 
 		# API CRU[D] endpoints coming from /api/kings/ (in main urls.py)
-		url(r'^save/$', GameCreateAPIView.as_view(), name="save-game"),
-        url(r'^list/$', GameListAPIView.as_view(), name="game-list"),
-		url(r'^(?P<pk>[A-Za-z0-9]+)/update/$', GameUpdateAPIView.as_view(), name="update-game"),
-		url(r'^(?P<pk>[A-Za-z0-9]+)/$', GameDetailAPIView.as_view(), name="game-details"),
+		url(r'^api/save/$', GameCreateAPIView.as_view(), name="save-game"),
+        url(r'^api/list/$', GameListAPIView.as_view(), name="game-list"),
+		url(r'^api/(?P<pk>[A-Za-z0-9]+)/update/$', GameUpdateAPIView.as_view(), name="update-game"),
+		url(r'^api/(?P<pk>[A-Za-z0-9]+)/$', GameDetailAPIView.as_view(), name="game-details"),
 ]

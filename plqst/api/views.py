@@ -17,8 +17,6 @@ class GameCreateAPIView(CreateAPIView):
 
         game_data = self.request.data
 
-        #self.request.session['temp_game_id'] = game_data['id']
-
         if self.request.user.is_authenticated:
             _ = serializer.save(game_data=game_data, game_owner=self.request.user)
         else:
@@ -27,9 +25,6 @@ class GameCreateAPIView(CreateAPIView):
             print(self.request.session)
 
         return Response(_)
-    #
-    # def post(self, request, *args, **kwargs):
-    #     return self.create(request, *args, **kwargs)
 
 
 class GameListAPIView(ListAPIView):
