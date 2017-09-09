@@ -12,7 +12,7 @@ from rest_framework.renderers import JSONRenderer
 class GameCreateAPIView(CreateAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
-
+    parser_classes = (JSONParser,)
     def perform_create(self, serializer):
 
         game_data = self.request.data
