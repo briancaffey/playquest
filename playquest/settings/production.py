@@ -80,10 +80,11 @@ DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'deb4m9n9tv2saj',
-    'USER': 'mydatabaseuser',
-    'PASSWORD': 'xuavukifzjrqvx',
+    'USER': 'xuavukifzjrqvx',
+    'PASSWORD': '540c0bf7005255fbd24d245b6a031fa071b32d23fdd6bae9551f2d616b1fceb5',
     'HOST': '127.0.0.1',
     'PORT': '5432',
+}
 }
 
 import dj_database_url
