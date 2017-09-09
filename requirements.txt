@@ -2,8 +2,10 @@ dj-database-url==0.4.2
 Django==1.10.5
 django-crispy-forms==1.6.1
 django-filter==1.0.4
+django-hashid-field==1.2.3
 djangorestframework==3.6.4
 gunicorn==19.7.1
+hashids==1.2.0
 Markdown==2.6.9
 olefile==0.44
 Pillow==4.2.1
