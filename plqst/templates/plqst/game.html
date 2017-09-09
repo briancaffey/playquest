@@ -417,7 +417,7 @@ $("#start_btn").click(function(e){
   $('.stat').show();
   $.ajax({
     //url: '/kings/json/',
-    url: '/api/playquest/{{ game_id }}/',
+    url: '/api/{{ game_id }}/',
     method: "GET",
     data: {},
     success: function(data){
