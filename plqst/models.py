@@ -25,7 +25,7 @@ class Game(models.Model):
         return str(self.id)
 
     def play_url(self):
-        return reverse('playquest:game_id', args=[self.id])
+        return reverse('plqst:game_id', args=[self.id])
 
 class GamePlay(models.Model):
     game_id = models.ForeignKey(Game, blank=True, null=True)
