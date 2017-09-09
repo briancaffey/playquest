@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'plqst',
     'rest_framework',
     'accounts',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
