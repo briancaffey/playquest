@@ -23,7 +23,7 @@
 {% include 'plqst/basic_nav.html' %}
 
 <div class="container">
-
+<h2>{{ user.username }}'s Profile</h2>
 {% for game in user_games %}
 
   <p><a href="{{ game.play_url }}">{{ game.id }}</a></p>

@@ -13,13 +13,21 @@
       <ul class="nav navbar-nav">
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#about">📋&nbsp;&nbsp;About</a>
+        </li>
         {% if request.user.is_authenticated %}
         <li>
-          <a>{{ request.user.username }}</a>
+          <a href="{% url 'plqst:profile' %}">👤&nbsp;&nbsp;{{ request.user.username }}</a>
         </li>
+
+        <li>
+          <a href="{% url 'accounts:logout' %}">🔒&nbsp;&nbsp;Logout</a>
+        </li>
+
         {% else %}
         <li>
-          <a href="{% url 'accounts:login' %}">Login 🔐</a>
+          <a href="{% url 'accounts:login' %}">🔐&nbsp;&nbsp;Login</a>
         </li>
         {% endif %}
       </ul>

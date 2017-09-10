@@ -56,4 +56,4 @@ def register_view(request):
 def logout_view(request):
 	logout(request)
 	messages.success(request, "You have successfully logged out.")
-	return redirect('home:home')
+	return redirect('plqst:home')
