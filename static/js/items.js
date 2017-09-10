@@ -349,9 +349,9 @@ var things = {
   },
 
     'judge' : {
-    'emoji': '👨🏻‍⚖️',
+    'emoji': '👨🏻',
     'wall': true,
-    'name':'judge',
+    'name':'man_dark_m',
   },
 
     'lady' : {
@@ -491,9 +491,11 @@ var things = {
 
 
 emoji_map =  [
+
+  //row 1
   [
 
-    {
+{
         'emoji': ' ',
         'wall':false,
         'name':'blank',
@@ -550,8 +552,7 @@ emoji_map =  [
   {
       'emoji': '👱🏼',
       'wall': true,
-      'name':'player',
-      'current':[1,2],
+      'name':'guy1',
     },
 
 
@@ -598,7 +599,15 @@ emoji_map =  [
     'wall': true,
     'name':'square_diamond',
   },
+
+  {
+    'emoji':'🦋',
+    'wall': true,
+    'name':'butterfly',
+  }
 ],
+
+//r2
 [
 
 {
@@ -692,7 +701,16 @@ emoji_map =  [
     'emoji': '🃏',
     'name':'card',
   },
+
+  {
+    'emoji':'😈',
+    'wall':false,
+    'name':'monster1',
+  },
+
+
 ],
+//r3
 [
 
  {
@@ -790,7 +808,13 @@ emoji_map =  [
     'wall': true,
     'name':'bird',
   },
+  {
+    'emoji':'☠️',
+    'wall':true,
+    'name':'skeleton1',
+  },
 ],
+//r4
 [
 
 {
@@ -849,7 +873,7 @@ emoji_map =  [
   },
 
 {
-    'emoji': '👨🏻‍⚖️',
+    'emoji': '👨🏿',
     'wall': true,
     'name':'judge',
   },
@@ -888,7 +912,14 @@ emoji_map =  [
     'wall': true,
     'name':'trident',
   },
+
+  {
+    'emoji':'👻',
+    'wall':false,
+    'name':'ghost',
+  }
 ],
+//r5
 [
 {
     'emoji': '👨🏻',
@@ -980,6 +1011,22 @@ emoji_map =  [
     'wall': true,
     'name':'church',
   },
+
+  {
+    'emoji':'🔔',
+    'wall':true,
+    'name':'bell',
+
+  },
+  {
+    'emoji':'💩',
+    'wall':true,
+    'name':'poop',
+  },
+],
+[
+
+
 ]
 
 ]
