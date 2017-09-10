@@ -278,9 +278,11 @@ function buildEmojiMenu(){
 var scene = null;
 function buildScene(init){
   if (init){
+
     var building_scene = scenes.scenes[scenes[init]].grid;
+    console.log("building scene init worked");
   } else {
-  var building_scene = scenes.scenes[scenes["current_scene"]].grid;
+  var building_scene = scenes["current_scene"].grid;
   }
   $("tbody tr").remove();
 
