@@ -31,7 +31,7 @@ def login_view(request):
 		if next:
 			print(next)
 			return redirect(next)
-		return redirect('posts:list')
+		return redirect('plqst:home')
 
 
 
