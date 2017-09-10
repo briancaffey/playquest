@@ -49,7 +49,7 @@ def register_view(request):
 		new_user = authenticate(username=user.username, password=password)
 		login(request, new_user)
 		messages.success(request, 'Thanks for registering, ' + str(request.user.username) + '!')
-		return redirect('posts:list')
+		return redirect('plqst:home')
 	context = {
 		'form':form,
 	}
