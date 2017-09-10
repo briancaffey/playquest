@@ -9,7 +9,6 @@ from django.contrib.auth import (
 	logout,
 	)
 from django.contrib.auth.decorators import login_required
-
 from .forms import UserLoginForm, UserRegistrationForm
 
 # Create your views here.
@@ -32,8 +31,6 @@ def login_view(request):
 			print(next)
 			return redirect(next)
 		return redirect('plqst:home')
-
-
 
 	return render(request, 'accounts/form.html', {'form':form})
 
