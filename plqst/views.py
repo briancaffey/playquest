@@ -24,9 +24,10 @@ def demo(request):
 
 def game_id(request, id):
 	game = Game.objects.filter(id=id)
+
 	if len(game) == 1:
 		context = {
-			'game':game,
+			'game':game[0],
 			'game_id': id,
 			}
 	else:
