@@ -464,9 +464,13 @@ $("#save-level").click(function(event){
            }
        }
   });
+  console.log(game_data.game_data.game_data)
   try {
+
     window.send_data = game_data.game_data.game_data
+    console.log("usingfirst", game_data.game_data.game_data)
   } catch (err) {
+    console.log("using game_data.game_data",game_data.game_data)
     window.send_data = game_data.game_data
   }
   $.ajax({
