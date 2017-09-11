@@ -55,7 +55,7 @@ def edit_game(request, id):
 
 def user_profile(request, username):
     u = User.objects.get(username=username)
-    user_profile = UserProfile.object.get(user=u)
+    user_profile = UserProfile.objects.get(user=u)
     user_games = Game.objects.filter(user=u)
     context = {
         'user_profile':user_profile,
