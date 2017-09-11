@@ -59,7 +59,7 @@ def user_profile(request, username):
     user_games = Game.objects.filter(game_owner=u)
     context = {
         'user_profile':user_profile,
-        'user_games':games,
+        'user_games':user_games,
     }
     return render(request, 'plqst/user_profile.html', context)
 
