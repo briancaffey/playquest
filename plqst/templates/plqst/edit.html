@@ -439,6 +439,7 @@ $(".emoji-choice").click(function(){
   $("#current_emoji").text(selected.emoji);
 })
 $("#save-level").click(function(event){
+  try
   event.preventDefault();
   $.ajaxSetup({
        beforeSend: function(xhr, settings) {
@@ -463,12 +464,16 @@ $("#save-level").click(function(event){
            }
        }
   });
-
+  try {
+    var send_data = game_data.game_data.game_data
+  } else {
+    var send_data = game_data.game_data
+  }
   $.ajax({
     type : "PUT",
     url: "/api/"+"{{ game_id }}"+"/update/",
     csrfmiddlewaretoken: "{{ csrf_token }}",
-    data : JSON.stringify({game_data:game_data.game_data.game_data, id:String("{{ game_id }}")}),
+    data : JSON.stringify({game_data:send_data, id:String("{{ game_id }}")}),
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
