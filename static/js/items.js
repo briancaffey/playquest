@@ -604,7 +604,47 @@ emoji_map =  [
     'emoji':'🦋',
     'wall': true,
     'name':'butterfly',
-  }
+  },
+  {
+    'emoji':'🌿',
+    'wall':true,
+    'name':'branch',
+  },
+  {
+    'emoji':'🌴',
+    'wall':true,
+    'name':'palm',
+  },
+  {
+    'emoji':'☘️',
+    'wall':true,
+    'name':'clover',
+  },
+  {
+    'emoji':'🍁',
+    'wall':true,
+    'name':'maple',
+  },
+  {
+    'emoji':'🍄',
+    'wall':true,
+    'name':'mushroom',
+  },
+  {
+    'emoji':'💐',
+    'wall':true,
+    'name':'bouqet',
+  },
+  {
+    'emoji':'🥀',
+    'wall':true,
+    'name':'dead_rose',
+  },
+  {
+    'emoji':'🌹',
+    'wall':true,
+    'name':'red_flower',
+  },
 ],
 
 //r2
@@ -706,6 +746,46 @@ emoji_map =  [
     'emoji':'😈',
     'wall':false,
     'name':'monster1',
+  },
+  {
+    'emoji':'🌸',
+    'wall':true,
+    'name':'pink_blossom',
+  },
+  {
+    'emoji':'🌼',
+    'wall':true,
+    'name':'yellow_blossom',
+  },
+  {
+    'emoji':'🌺',
+    'wall':true,
+    'name':'hawaii_flower',
+  },
+  {
+    'emoji':'🌚',
+    'wall':true,
+    'name':'dark_moon',
+  },
+  {
+    'emoji':'🌝',
+    'wall':true,
+    'name':'bright_moon',
+  },
+  {
+    'emoji':'🌞',
+    'wall':true,
+    'name':'smiling_sun',
+  },
+  {
+    'emoji':'⭐️',
+    'wall':true,
+    'name':'star',
+  },
+  {
+    'emoji':'🌟',
+    'wall':true,
+    'name':'sparkling_star',
   },
 
 
@@ -813,6 +893,47 @@ emoji_map =  [
     'wall':true,
     'name':'skeleton1',
   },
+  {
+    'emoji':'⚡️',
+    'wall':true,
+    'name':'bolt',
+  },
+  {
+    'emoji':'🔥',
+    'wall':true,
+    'name':'flame',
+  },
+  {
+    'emoji':'🌦',
+    'wall':true,
+    'name':'sunny_rain',
+  },
+  {
+    'emoji':'🌧',
+    'wall':true,
+    'name':'rain_clouds',
+  },
+  {
+    'emoji':'☁️',
+    'wall':true,
+    'name':'cloud',
+  },
+  {
+    'emoji':'❄️',
+    'wall':true,
+    'name':'snow_flake',
+  },
+  {
+    'emoji':'⛄️',
+    'wall':true,
+    'name':'snowman',
+  },
+  {
+    'emoji':'🌽',
+    'wall':true,
+    'name':'corn',
+  },
+
 ],
 //r4
 [
@@ -917,7 +1038,52 @@ emoji_map =  [
     'emoji':'👻',
     'wall':false,
     'name':'ghost',
-  }
+  },
+  {
+    'emoji':'🥕',
+    'wall':true,
+    'name':'carrot',
+  },
+  {
+    'emoji':'🍆',
+    'wall':true,
+    'name':'eggplant',
+  },
+  {
+    'emoji':'🍅',
+    'wall':true,
+    'name':'tomato',
+  },
+  {
+     'emoji': '📚',
+     'wall': true,
+     'name':'books0',
+   },
+
+
+ {
+     'emoji': '🕊',
+     'wall': true,
+     'name':'dove',
+   },
+
+  {
+     'emoji': '⛪️',
+     'wall': true,
+     'name':'church',
+   },
+
+   {
+     'emoji':'🔔',
+     'wall':true,
+     'name':'bell',
+
+   },
+   {
+     'emoji':'💩',
+     'wall':true,
+     'name':'poop',
+   },
 ],
 //r5
 [
@@ -987,46 +1153,467 @@ emoji_map =  [
     'name':'world',
   },
 
-{
-    'emoji': '📖',
-    'wall': true,
-    'name':'books7',
+  {
+    'emoji':'📖',
+    'wall':true,
+    'name':'open_book',
+  },
+  {
+    'emoji':'💛',
+    'wall':true,
+    'name':'yellow_heart',
+  },
+  {
+    'emoji':'🇦🇽',
+    'wall':true,
+    'name':'flag4',
+  },
+  {
+    'emoji':'🇦🇱',
+    'wall':true,
+    'name':'flag5',
+  },
+  {
+    'emoji':'👳🏿',
+    'wall':true,
+    'name':'dark_turban',
+  },
+  {
+    'emoji':'👵🏼',
+    'wall':true,
+    'name':'grandma_white',
+  },
+  {
+    'emoji':'👱🏽',
+    'wall':true,
+    'name':'tan_male',
+  },
+  {
+    'emoji':'👨🏿',
+    'wall':true,
+    'name':'dark_male',
+  },
+  {
+    'emoji':'👦🏼',
+    'wall':true,
+    'name':'blonde_kid',
+  },
+  {
+    'emoji':'👶🏻',
+    'wall':true,
+    'name':'white_baby',
+  },
+  {
+    'emoji':'👣',
+    'wall':true,
+    'name':'footsteps',
+  },
+  {
+    'emoji':'💍',
+    'wall':true,
+    'name':'ring',
+  },
+  {
+    'emoji':'🇹🇭',
+    'wall':true,
+    'name':'flag14',
+  },
+  {
+    'emoji':'🎍',
+    'wall':true,
+    'name':'bamboo',
+  },
+],
+//r6
+[
+  {
+    'emoji':'🐛',
+    'wall':true,
+    'name':'worm',
   },
 
- {
-    'emoji': '📚',
-    'wall': true,
-    'name':'books0',
-  },
-
-
-{
-    'emoji': '🕊',
-    'wall': true,
-    'name':'dove',
-  },
-
- {
-    'emoji': '⛪️',
-    'wall': true,
-    'name':'church',
+  {
+    'emoji':'🏯',
+    'wall':true,
+    'name':'castle_japan',
   },
 
   {
     'emoji':'🔔',
     'wall':true,
     'name':'bell',
-
   },
   {
-    'emoji':'💩',
+    'emoji':'🎃',
     'wall':true,
-    'name':'poop',
+    'name':'pumpkin',
   },
+  {
+    'emoji':'🐻',
+    'wall':true,
+    'name':'bear',
+  },
+  {
+    'emoji':'🦁',
+    'wall':true,
+    'name':'lion',
+  },
+  {
+    'emoji':'🐸',
+    'wall':true,
+    'name':'frog',
+  },
+  {
+    'emoji':'🐝',
+    'wall':true,
+    'name':'bee',
+  },
+  {
+    'emoji':'🐚',
+    'wall':true,
+    'name':'shell',
+  },
+  {
+    'emoji':'🐍',
+    'wall':true,
+    'name':'snake',
+  },
+  {
+    'emoji':'🐉',
+    'wall':true,
+    'name':'dragon1',
+  },
+  {
+    'emoji':'🕸',
+    'wall':true,
+    'name':'web',
+  },
+  {
+    'emoji':'🕷',
+    'wall':true,
+    'name':'spider',
+  },
+  {
+    'emoji':'🐺',
+    'wall':true,
+    'name':'wolf',
+  },
+  {
+    'emoji':'🐤',
+    'wall':true,
+    'name':'duckling',
+  },
+  {
+    'emoji':'🐔',
+    'wall':true,
+    'name':'chicken',
+  },
+  {
+    'emoji':'🌱',
+    'wall':true,
+    'name':'sprout',
+  },
+  {
+    'emoji':'🇧🇳',
+    'wall':true,
+    'name':'flag6',
+  },
+  {
+    'emoji':'🇮🇨',
+    'wall':true,
+    'name':'flag7',
+  },
+  {
+    'emoji':'🇬🇮',
+    'wall':true,
+    'name':'flag8',
+  },
+  {
+    'emoji':'🇮🇲',
+    'wall':true,
+    'name':'flag9',
+  },
+  {
+    'emoji':'🇰🇬',
+    'wall':true,
+    'name':'flag10',
+  },
+  {
+    'emoji':'🇱🇧',
+    'wall':true,
+    'name':'flag11',
+  },
+  {
+    'emoji':'🇳🇫',
+    'wall':true,
+    'name':'flag12',
+  },
+  {
+    'emoji':'🇸🇦',
+    'wall':true,
+    'name':'flag13',
+  },
+
+
+
+],
+//r7
+
+[
+  {
+    'emoji':'🍯',
+    'wall':true,
+    'name':'honey',
+  },
+  {
+    'emoji':'🍷',
+    'wall':true,
+    'name':'wine',
+  },
+  {
+    'emoji':'🎗',
+    'wall':true,
+    'name':'ribbon',
+  },
+  {
+    'emoji':'🎨',
+    'wall':true,
+    'name':'palet',
+  },
+  {
+    'emoji':'🥁',
+    'wall':true,
+    'name':'drum',
+  },
+  {
+    'emoji':'🎺',
+    'wall':true,
+    'name':'trumpet',
+  },
+  {
+    'emoji':'🗺',
+    'wall':true,
+    'name':'map',
+  },
+  {
+    'emoji':'🏕',
+    'wall':true,
+    'name':'camp',
+  },
+  {
+    'emoji':'🏡',
+    'wall':true,
+    'name':'house_tree',
+  },
+  {
+    'emoji':'⚖️',
+    'wall':true,
+    'name':'scale',
+  },
+  {
+    'emoji':'⛓',
+    'wall':true,
+    'name':'chains',
+  },
+  {
+    'emoji':'⚙️',
+    'wall':true,
+    'name':'gear',
+  },
+  {
+    'emoji':'📿',
+    'wall':true,
+    'name':'tasle',
+  },
+  {
+    'emoji':'🏺',
+    'wall':true,
+    'name':'vase1',
+  },
+  {
+    'emoji':'⚱️',
+    'wall':true,
+    'name':'vase2',
+  },
+  {
+    'emoji':'🕳',
+    'wall':true,
+    'name':'hole',
+  },
+  {
+    'emoji':'🚽',
+    'wall':true,
+    'name':'toilet',
+  },
+  {
+    'emoji':'🛁',
+    'wall':true,
+    'name':'bath',
+  },
+  {
+    'emoji':'🎁',
+    'wall':true,
+    'name':'gift',
+  },
+  {
+    'emoji':'🎏',
+    'wall':true,
+    'name':'color_fish',
+  },
+  {
+    'emoji':'🎀',
+    'wall':true,
+    'name':'pink_bow',
+  },
+  {
+    'emoji':'🎊',
+    'wall':true,
+    'name':'celebration',
+  },
+  {
+    'emoji':'🎉',
+    'wall':true,
+    'name':'party',
+  },
+  {
+    'emoji':'🎎',
+    'wall':true,
+    'name':'scarecrow',
+  },
+  {
+    'emoji':'🏮',
+    'wall':true,
+    'name':'red_lantern',
+  },
+
 ],
 [
+  {
+    'emoji':'💚',
+    'wall':true,
+    'name':'green_heart',
+  },
+  {
+    'emoji':'💙',
+    'wall':true,
+    'name':'blue_heart',
+  },
+  {
+    'emoji':'💜',
+    'wall':true,
+    'name':'pink_heart',
+  },
+  {
+    'emoji':'🖤',
+    'wall':true,
+    'name':'black_heart',
+  },
+  {
+    'emoji':'💔',
+    'wall':true,
+    'name':'broken_heart',
+  },
+  {
+    'emoji':'❣️',
+    'wall':true,
+    'name':'heart_dot',
+  },
+  {
+    'emoji':'❌',
+    'wall':true,
+    'name':'red_x',
+  },
+  {
+    'emoji':'⭕️',
+    'wall':true,
+    'name':'red_o',
+  },
+  {
+    'emoji':'⛔️',
+    'wall':true,
+    'name':'no_entry',
+  },
+  {
+    'emoji':'🛑',
+    'wall':true,
+    'name':'stop_sign',
+  },
+  {
+    'emoji':'🚫',
+    'wall':true,
+    'name':'no_entry',
+  },
+  {
+    'emoji':'♨️',
+    'wall':true,
+    'name':'hot_spring',
+  },
+  {
+    'emoji':'❗️',
+    'wall':true,
+    'name':'exclamation',
+  },
+  {
+    'emoji':'❓',
+    'wall':true,
+    'name':'question',
+  },
+  {
+    'emoji':'⁉️',
+    'wall':true,
+    'name':'exclamation_question',
+  },
+  {
+    'emoji':'🌀',
+    'wall':true,
+    'name':'whirl',
+  },
+  {
+    'emoji':'🆗',
+    'wall':true,
+    'name':'ok_sign',
+  },
+  {
+    'emoji':'🎶',
+    'wall':true,
+    'name':'music_notes1',
+  },
+  {
+    'emoji':'🎵',
+    'wall':true,
+    'name':'music_notes2',
+  },
+  {
+    'emoji':'💬',
+    'wall':true,
+    'name':'speech_bubble',
+  },
+  {
+    'emoji':'💭',
+    'wall':true,
+    'name':'thought_bubble',
+  },
+  {
+    'emoji':'🗯',
+    'wall':true,
+    'name':'comic_bubble',
+  },
+  {
+    'emoji':'🚩',
+    'wall':true,
+    'name':'flag1',
+  },
+  {
+    'emoji':'🏳️',
+    'wall':true,
+    'name':'flag2',
+  },
+  {
+    'emoji':'🏴',
+    'wall':true,
+    'name':'flag3',
+  },
+],
 
-
-]
 
 ]
