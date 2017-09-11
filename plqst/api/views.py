@@ -9,7 +9,6 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 # from rest_framework import authentication, permissions, serializers
 
-
 class GameCreateAPIView(CreateAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
