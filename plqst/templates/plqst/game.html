@@ -43,7 +43,7 @@
               <li><a class="btn" id="branch-menu" type="button" data-toggle="modal" data-target="#branch-modal">Branch 🌿</a></li>
               <li><a href="#music" type="button" data-toggle="modal" data-target="#myModal-music">🔊</a></li>
               {% if request.user.is_authenticated %}
-              <li><a href="{{ request.user.userprofile.profile_url }}">{{ }}</a></li>
+              <li><a href="{{ request.user.userprofile.profile_url }}">{{ request.user.username }}</a></li>
               {% else %}
               <li><a href="{% url 'accounts:login' %}">🔐&nbsp;&nbsp;Login</a></li>
               {% endif %}
