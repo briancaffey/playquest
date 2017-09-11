@@ -58,7 +58,6 @@
         <div style="text-align:center;" class="modal-body">
           <h1>Your game has been saved! 💾✅👌</h1>
           <p>Here's the link to play this game: <b><a id="new_game_link" href="" target="_blank">link</a></b></p>
-          <p>Here's the link to edit this game: <b><a id="edit_game_link" href="" target="_blank">https://playquest.io/game/44/edit</a></p>
           <br />
           <a class="btn btn btn-success" href="">play</a><br />
           <p>the game you just made will be saved to your profile if you create an account with the button below</p>
@@ -300,7 +299,8 @@ function buildScene(init){
 function updateSquare(){
   var map_x = pointer.current[0]
   var map_y = pointer.current[1]
-  scenes.scenes[scenes["current_scene"]].grid[map_x][map_y] = selected
+  scenes[current_scene].grid[map_x][map_y] = selected
+  // scenes.scenes[scenes["current_scene"]].grid[map_x][map_y] = selected
 }
 function showBlockInfo(){
   $("#blockInfo p").empty();
@@ -468,7 +468,7 @@ $("#save-level").click(function(event){
 
   $.ajax({
     type : "PUT",
-    url: "/api/playquest/"+"{{ game_id }}"+"/update/",
+    url: "/api/"+"{{ game_id }}"+"/update/",
     csrfmiddlewaretoken: "{{ csrf_token }}",
     data : JSON.stringify({game_data:scenes, id:String("{{ game_id }}")}),
     headers: {
@@ -482,7 +482,7 @@ $("#save-level").click(function(event){
         var protocol = pathArray[0];
         var host = pathArray[2];
         var url = protocol + '//' + host;
-        var game_url = "/playquest/game/"+String(game_id)+"/";
+        var game_url = "/game/"+String(game_id)+"/";
         var full_url = url + game_url;
         $('#new_game_link').attr('href',full_url);
         $('#new_game_link').text(full_url);
