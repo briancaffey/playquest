@@ -468,7 +468,7 @@ $("#save-level").click(function(event){
     type : "PUT",
     url: "/api/"+"{{ game_id }}"+"/update/",
     csrfmiddlewaretoken: "{{ csrf_token }}",
-    data : JSON.stringify({game_data:game_data["game_data"], id:String("{{ game_id }}")}),
+    data : JSON.stringify({game_data:game_data, id:String("{{ game_id }}")}),
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
