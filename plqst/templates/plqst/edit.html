@@ -277,14 +277,12 @@ function buildEmojiMenu(){
 var scene = null;
 function buildScene(init){
   if (init){
-
     var building_scene = scenes.scenes[scenes[init]].grid;
     console.log("building scene init worked");
   } else {
   var building_scene = scenes[current_scene].grid
   }
   $("tbody tr").remove();
-
   for (row in building_scene){
     var current = $('.grid tbody').append("<tr class='emoji_row' row="+row+"></tr>")
     for (square in building_scene[row]){
@@ -470,7 +468,7 @@ $("#save-level").click(function(event){
     type : "PUT",
     url: "/api/"+"{{ game_id }}"+"/update/",
     csrfmiddlewaretoken: "{{ csrf_token }}",
-    data : JSON.stringify({game_data:scenes, id:String("{{ game_id }}")}),
+    data : JSON.stringify({game_data:game_data["game_data"], id:String("{{ game_id }}")}),
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
