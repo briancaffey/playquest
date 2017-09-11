@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Game
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from accounts.models import UserProfile
+
 # Create your views here.
 
 def playquest_home(request):
@@ -49,6 +52,15 @@ def edit_game(request, id):
     else:
         context = {}
     return render(request, 'plqst/edit.html', context)
+
+def user_profile(request, username):
+    u = User.objects.get(username=username)
+    user_profile = UserProfile.object.get(user=u)
+    user_games = Game.objects.filter(user=u)
+    context = {
+        'user_profile':user_profile,
+        'user_games':games,
+    }
 
 @login_required
 def profile_page(request):

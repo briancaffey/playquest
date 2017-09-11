@@ -3,6 +3,7 @@ from . import views
 from .api.views import GameCreateAPIView, GameListAPIView, GameDetailAPIView, GameUpdateAPIView
 
 urlpatterns = [
+        url(r'^user/(?P<username>[A-Za-z0-9]+)/$', views.user_profile, name="user_profile")
         url(r'^profile/$', views.profile_page, name='profile'),
 		url(r'^create/$', views.create, name='create'),
 		url(r'^demo/$', views.demo, name='demo'),

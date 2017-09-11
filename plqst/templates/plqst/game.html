@@ -35,14 +35,19 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+              <li><a href="{% url 'plqst:user_profile' username=game.game_owner %}">@{{ game.game_owner }}</a></li>
               <li style="display:none;" class="stat"><a>⏳&nbsp;&nbsp;<span class="clock">0 : 00</span></a></li>
               <li><a class="btn" id='items-button' type="button" data-toggle="modal" data-target="#item-modal">Items 🎒</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a class="btn" id="branch-menu" type="button" data-toggle="modal" data-target="#branch-modal">Branch 🌿</a></li>
               <li><a href="#music" type="button" data-toggle="modal" data-target="#myModal-music">🔊</a></li>
-              <li><a>Guest</a></li>
-              <li><a href="{% url 'plqst:home' %}">Exit</a></li>
+              {% if request.user.is_authenticated %}
+              <li><a href="{{ request.user.userprofile.profile_url }}">{{ }}</a></li>
+              {% else %}
+              <li><a href="{% url 'accounts:login' %}">🔐&nbsp;&nbsp;Login</a></li>
+              {% endif %}
+
             </ul>
           </div><!--/.nav-collapse -->
         </div>

@@ -23,13 +23,13 @@
 {% include 'plqst/basic_nav.html' %}
 
 <div class="container">
-<h2>{{ user.username }}'s Profile</h2>
+<h2>{{ user_profile.user.username }}'s Profile</h2>
 <hr>
 <h2>Your Games</h2>
 {% for game in user_games %}
 <p style="font-size:2em;"><a href="{{ game.play_url }}">{{ game.id }}</a></p>
 <small>created on {{ game.game_created | date:"M d, 'y"}}</small>
-<p style="font-size:1.75em;"><a href="{% url 'plqst:game_id' id=game.id %}">▶️&nbsp;&nbsp;Play </a> | <a href="{% url 'plqst:edit_game' id=game.id %}">🛠&nbsp;&nbsp;Edit</a></p>
+<p style="font-size:1.75em;"><a href="{% url 'plqst:game_id' id=game.id %}">▶️&nbsp;&nbsp;Play</a></p>
 <br />
 {% endfor %}
 </div>
