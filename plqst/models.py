@@ -24,6 +24,9 @@ class Game(models.Model):
     def __str__(self):
         return str(self.id)
 
+    def game_owner_url(self):
+        return reverse('plqst:user_profile', args=[self.game_owner])
+
     def play_url(self):
         return reverse('plqst:game_id', args=[self.id])
 
