@@ -439,7 +439,7 @@ $(".emoji-choice").click(function(){
   $("#current_emoji").text(selected.emoji);
 })
 $("#save-level").click(function(event){
-  
+
   event.preventDefault();
   $.ajaxSetup({
        beforeSend: function(xhr, settings) {
@@ -465,9 +465,9 @@ $("#save-level").click(function(event){
        }
   });
   try {
-    var send_data = game_data.game_data.game_data
+    window.send_data = game_data.game_data.game_data
   } catch (err) {
-    var send_data = game_data.game_data
+    window.send_data = game_data.game_data
   }
   $.ajax({
     type : "PUT",
