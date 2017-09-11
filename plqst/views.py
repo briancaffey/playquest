@@ -61,6 +61,7 @@ def user_profile(request, username):
         'user_profile':user_profile,
         'user_games':games,
     }
+    return render(request, 'plqst/user_profile.html', context)
 
 @login_required
 def profile_page(request):
