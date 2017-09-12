@@ -111,7 +111,7 @@
     <div class="modal-dialog">
       <!-- Modal content-->
       <div style="text-align:center;" class="modal-content">
-        <h1>Scenes</h1>
+        <h1>Scenes 🎞</h1>
         <button class="btn btn-warning" id="add-scene">Add New Scene</button>
         <div style="text-align:center;" id="scene-list" class="modal-body">
 
@@ -220,11 +220,10 @@ var scenes = {
 
 
 function updateSceneList(){
-  var scene_names = get_scene_names(scenes.scenes);
+  var scene_names = get_scene_names(game_data.game_data.scenes);
   for (var s in scene_names){
-    if (scene_names[s] == scenes.current_scene){
+    if (scene_names[s] == game_data.game_data.current_scene){
       $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene #" + s +"</a><br />")
-
     } else{
       $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene #" + s +"</a><br />")
   }
@@ -233,9 +232,9 @@ function updateSceneList(){
 
 $("#add-scene").click(function(){
 
-  var next = Object.keys(scenes.scenes).length
+  var next = Object.keys(game_data.game_data).length
   var blank_scene_copy = $.extend(true, {}, blank_scene);
-  scenes.scenes[String(next)] = blank_scene_copy
+  game_data.game_data.scenes[String(next)] = blank_scene_copy
   $("#scene-list").empty();
   updateSceneList();
 
@@ -248,8 +247,6 @@ $("#scene-list").on("click","a", function(){
   updateStats();
   $("#scene-list").empty();
   updateSceneList();
-
-
 })
 
 var pointer = {
