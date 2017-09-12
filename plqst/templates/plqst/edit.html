@@ -218,7 +218,6 @@ var scenes = {
               }
             }
 
-
 function updateSceneList(){
   var scene_names = get_scene_names(game_data.game_data.scenes);
   for (var s in scene_names){
@@ -226,13 +225,13 @@ function updateSceneList(){
       $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene #" + s +"</a><br />")
     } else{
       $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene #" + s +"</a><br />")
-  }
+    }
   }
 }
 
 $("#add-scene").click(function(){
 
-  var next = Object.keys(game_data.game_data).length
+  var next = Object.keys(game_data.game_data.scenes).length
   var blank_scene_copy = $.extend(true, {}, blank_scene);
   game_data.game_data.scenes[String(next)] = blank_scene_copy
   $("#scene-list").empty();
