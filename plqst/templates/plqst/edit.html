@@ -242,7 +242,7 @@ $("#add-scene").click(function(){
 
 $("#scene-list").on("click","a", function(){
   var clicked_scene_id = $(this).attr("id")
-  scenes.current_scene = String(clicked_scene_id)
+  game_data.game_data.current_scene = String(clicked_scene_id)
   buildScene();
   updateStats();
   $("#scene-list").empty();
