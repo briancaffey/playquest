@@ -285,6 +285,9 @@ function checkSquare(square){
     $("#dialogue-title").text(square.dialogue_title);
     $("#dialogue-body").text(square.dialogue_body);
     switch (square.voice) {
+      case "0":
+        console.log("no narration");
+        break
       case "1":
         sayText(square.dialogue_body,5,1,4);
         break;
