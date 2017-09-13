@@ -153,7 +153,9 @@
         <div class="col-md-3">Horizontal: <select style="width:200px" class="form-control" id="horizontal-select"></select></div>
         <div class="col-md-3"><b><br /></b><button id="set-portal-button" class="btn btn-success">Set</button>&nbsp;&nbsp;&nbsp;<span id="block-transition-saved"><br /></span></div>
       </div>
+
       <hr>
+
       <h3 data-toggle="collapse" data-target="#dialogue"><a style="cursor:pointer;">Dialogue</a></h3>
       <div id="dialogue" class="collapse">
       <input id="simple-dialogue-title" class="form-control text-input"></input><br />
@@ -161,14 +163,6 @@
       <br />
       <div class="row">
         <div class="col-md-12">Voice:
-          <!-- <select style="width:200px" class="form-control" id="select-language">
-            <option value=1 selected>English 🇬🇧</option>
-            <option value=2>Spanish 🇪🇸</option>
-            <option value=3>French 🇫🇷</option>
-            <option value=4>German 🇩🇪</option>
-            <option value=5>Chinese 🇨🇳</option>
-            <option value=6>Japanese 🇯🇵</option>
-          </select> -->
           <div class="btn-group" data-toggle="buttons">
             <label class="btn btn-default active">
               <input type="radio" name="voice" checked autocomplete="off" value=1>👨🏻&nbsp;&nbsp;Dan 🇬🇧
@@ -179,39 +173,44 @@
             <label class="btn btn-default">
               <input type="radio" name="voice" autocomplete="off" value=0>🔇 None
             </label>
-            <!-- <label class="btn btn-default">
-              <input type="checkbox" autocomplete="off">Will 🇺🇸
-            </label>
-            <label class="btn btn-default">
-              <input type="checkbox" autocomplete="off">Mary 🇺🇸
-            </label>
-            <label class="btn btn-default">
-              <input type="checkbox" autocomplete="off">Eduardo 🇪🇸
-            </label>
-            <label class="btn btn-default">
-              <input type="checkbox" autocomplete="off">Roberta 🇪🇸
-            </label> -->
           </div>
         </div>
-      <!-- <div class="col-md-4">Engine:
-        <select style="width:200px" class="form-control" id="select-engine">
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-        </select>
-      </div>
-      <div class="col-md-4">Voice:
-        <select style="width:200px" class="form-control" id="select-voice">
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-        </select>
-      </div> -->
+
       </div>
       <br />
       <button id="set-dialogue-button" class="btn btn-success">Set Dialogue</button>
     </div>
+
       <hr>
+      <div>
+      <h3 data-toggle="collapse" data-target="#conditional-dialogue"><a style="cursor:pointer;">Conditional Dialogue</a></h3>
+      <div id="conditional-dialogue" class="collapse">
+        <small>This dialogue will show if the player has the <b>key</b> you specify. Otherwise the simple dialogue will show. </small>
+        <input id="conditional-dialogue-key" class="form-control text-input" placeholder="enter the name of the key needed to show this dialogue"></input></br>
+        <input id="conditional-dialogue-title" class="form-control text-input"></input><br />
+        <textarea id="conditional-dialogue-body" rows="4" class="form-control text-input"></textarea>
+        <br />
+        <div class="row">
+          <div class="col-md-12">Voice:
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="cd-voice" checked autocomplete="off" value=1>👨🏻&nbsp;&nbsp;Dan 🇬🇧
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="cd-voice" autocomplete="off" value=2>👩🏽&nbsp;&nbsp;Mary 🇺🇸
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="cd-voice" autocomplete="off" value=0>🔇 None
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <button id="set-conditional-dialogue" class="btn btn-success">Set Conditional Dialogue</button>
+      </div>
+      </div>
+      <hr>
+
       <h3 data-toggle="collapse" data-target="#key"><a style="cursor:pointer;">Key</a></h3>
       <div id="key" class="collapse">
       <small>You can "unlock" certain items with keys</small>
@@ -432,8 +431,6 @@ function showBlockInfo(){
   if (selected_item.dialogue) {
     $("#simple-dialogue-title").val(selected_item.dialogue_title);
     $("#simple-dialogue-body").val(selected_item.dialogue_body);
-
-
   }
 
   $("#set-dialogue-button").click(function(){
@@ -451,11 +448,49 @@ function showBlockInfo(){
     scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
   })
 
+//clear cd input and set if it exists
+$("#conditional-dialogue-key").val("")
+$("#conditional-dialogue-title").val("")
+$("#conditional-dialogue-body").val("")
+if (selected_item.hasOwnProperty("conditional_dialogue")){
+  $("#conditional-dialogue-key").val(selected_item.conditional_dialogue_key)
+  $("#conditional-dialogue-title").val(selected_item.conditional_dialogue_title)
+  $("#conditional-dialogue-body").val(selected_item.conditional_dialogue_body)
+}
+
+$("#set-conditional-dialogue").click(function(){
+  window.cloned_item.conditional_dialogue = true
+  if ( (window.cloned_item.name != 'scroll') && (window.cloned_item.name != 'blank') && (window.cloned_item.name != 'key') ) {
+    window.cloned_item.wall = true
+  }
+  var cd_voice = $("input:radio[name ='cd-voice']:checked").val();
+  var conditional_dialogue_key = $("#conditional-dialogue-key").val();
+  var conditional_dialogue_title = $("#conditional-dialogue-title").val();
+  var conditional_dialogue_body = $("#conditional-dialogue-body").val();
+  window.cloned_item.cd_voice = cd_voice
+  window.cloned_item.conditional_dialogue_key = conditional_dialogue_key
+  window.cloned_item.conditional_dialogue_title = conditional_dialogue_title
+  window.cloned_item.conditional_dialogue_body = conditional_dialogue_body
+  scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
+})
+
+//clear key input and set it if it exists
+$("#key-value").val("");
+if (selected_item.hasOwnProperty("key_name")){
+  $("#key-value").val(selected_item.key_name);
+}
+
 $("#set-key").click(function(){
   var key_name = $("#key-value").val();
   window.cloned_item.key_name = key_name
   scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
 })
+
+//clear lock input and set it if it exists
+$("#lock-value").val("");
+if (selected_item.hasOwnProperty("lock_name")){
+  $("#lock-value").val(selected_item.lock_name)
+}
 
 $("#set-lock").click(function(){
   var lock_name = $("#lock-value").val();
@@ -465,41 +500,15 @@ $("#set-lock").click(function(){
 
   showBlockInfoModal();
 }
-// $("#set-portal-button").click(function(){
-//   var
-//   var block = scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]]
-//   block.exitway = true
-//   var _next = $("#portal-select").val();
-//   block.next = _next
-//   var _v = $("#vertical-select").val();
-//   var _h = $("#horizontal-select").val();
-//   block.entry = [_v, _h]
-//   $("#block-transition-saved").html("<p style='color:green;'>Set!</p>")
-// })
-// $(".grid tbody").on("click", "tr td", function() {
-//   var row = $(this).attr('row')
-//   var col = $(this).attr('col')
-//   var cloned_item = _.clone(things[scenes.scenes[scenes["current_scene"]].grid[row][col].name]);  //$.extend(true, {}, things[scenes.scenes[scenes["current_scene"]].grid[row][col].name]);
-//   scenes.scenes[scenes["current_scene"]].grid[row][col] = cloned_item
-//   //scenes.scenes[scenes["current_scene"]].grid[row][col] = cloned_item
-//   showBlockInfo(cloned_item)//scenes.scenes[scenes["current_scene"]].grid[row][col]);
-// });
-
-
 
 function updateStats(){
-  // $(".health").text(player.health)
-  // $(".diamonds").text(player.diamonds)
-  // $(".scrolls").text(player.scrolls)
-  // $(".keys").text(player.keys)
   $("#scene-name").text(scenes.current_scene)
   $("#pointer-pos").text(pointer.current)
   $("#active-emoji").text(emoji_map[emoji_pointer.current[0]][emoji_pointer.current[1]].emoji)
 }
 
-
 var pushKeys = window.addEventListener("keydown", function(event) {
-  if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") ){
+  if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") || $("#conditional-dialogue-key").is(":focus") || $("#conditional-dialogue-title").is(":focus") || $("conditional-dialogue-body").is(":focus") ){
 
   } else {
   if (event.keyCode == 81){
@@ -707,11 +716,7 @@ var showBlockInfoModal = function() {
 blockInfospan.onclick = function() {
     blockInfoModal.style.display = "none";
 }
-// window.onclick = function(event) {
-//     if (event.target == blockInfoModal) {
-//         blockInfoModal.style.display = "none";
-//     }
-// }
+
 var showModal = function() {
     modal.style.display = "block";
 }
