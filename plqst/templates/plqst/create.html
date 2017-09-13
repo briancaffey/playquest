@@ -483,6 +483,7 @@ if (selected_item.hasOwnProperty("key_name")){
 $("#set-key").click(function(){
   var key_name = $("#key-value").val();
   window.cloned_item.key_name = key_name
+  window.cloned_item.wall = false
   scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
 })
 
@@ -508,7 +509,7 @@ function updateStats(){
 }
 
 var pushKeys = window.addEventListener("keydown", function(event) {
-  if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") || $("#conditional-dialogue-key").is(":focus") || $("#conditional-dialogue-title").is(":focus") || $("conditional-dialogue-body").is(":focus") ){
+  if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") || $("#conditional-dialogue-key").is(":focus") || $("#conditional-dialogue-title").is(":focus") || $("#conditional-dialogue-body").is(":focus") ){
 
   } else {
   if (event.keyCode == 81){
