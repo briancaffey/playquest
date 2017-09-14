@@ -82,7 +82,7 @@
           <br />
           <h4>Game Title</h4>
           <p>Set a title for this game</p>
-          <input class="form-control text-input"></input>
+          <input id="game-title" class="form-control text-input"></input>
           <hr>
           <h4>Player Avatar</h4>
           <p>Choose an emoji for the main character: </p>
@@ -97,9 +97,9 @@
         <hr>
         <h4>Scene Title</h4>
         <p>Set a title for this scene</p>
-        <input class="form-control text-input"></input>
+        <input id="scene-title" class="form-control text-input"></input>
         <br />
-        <button class="btn btn-primary"  value="Save">Save</button>
+        <button id="save-settings" class="btn btn-primary"  value="Save">Save</button>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
@@ -138,6 +138,8 @@
       </div>
     </div>
   </div>
+
+
 
 
   <div id="blockInfoModal" class="dialogue-modal">
@@ -389,6 +391,29 @@ function updateSquare(){
   var map_y = pointer.current[1]
   scenes.scenes[scenes["current_scene"]].grid[map_x][map_y] = selected
 }
+
+function showSettings(){
+  $("#game-title").val("");
+  $("#scene-title").val("");
+
+  if (scenes.hasOwnProperty("game_title")){
+    $("#game-title").val(scenes.game_title)
+  }
+
+  if (scenes.scenes[scenes["current_scene"]].hasOwnProperty("scene_title")){
+    $("#scene-title").val(scenes.scenes[scenes["current_scene"]].scene_title);
+  }
+
+  $("#save-settings").click(function(){
+    var scene_title = $("#scene-title").val();
+    var game_title = $("#game-title").val();
+    scenes.scenes[scenes["current_scene"]].scene_title = scene_title
+    scenes.game_title = game_title
+    $("#save-settings").modal("toggle")
+  })
+}
+
+
 function showBlockInfo(){
   $("#blockInfo p").empty();
   $("#vertical-select").empty();
@@ -504,6 +529,7 @@ $("#set-lock").click(function(){
 }
 
 function updateStats(){
+
   $("#scene-name").text(scenes.current_scene)
   $("#pointer-pos").text(pointer.current)
   $("#active-emoji").text(emoji_map[emoji_pointer.current[0]][emoji_pointer.current[1]].emoji)
@@ -513,6 +539,9 @@ var pushKeys = window.addEventListener("keydown", function(event) {
   if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") || $("#conditional-dialogue-key").is(":focus") || $("#conditional-dialogue-title").is(":focus") || $("#conditional-dialogue-body").is(":focus") ){
 
   } else {
+
+
+
   if (event.keyCode == 81){
     $('#help-modal').modal('toggle');
   }
