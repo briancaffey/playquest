@@ -482,30 +482,23 @@ var things = {
 
 }
 
-// var emoji_map =[[things.player, things.tree, things.tent, things.blank, things.heart,things.diamond,things.scroll,things.orb,things.castle,things.sunflower,things.flower,things.squirrle,things.owl,things.arms,things.candle,things.square_diamond,],
-//                 [things.spd,things.clb,things.dmnd,things.hrt,things.crown,things.horn,things.guard,things.door,things.painting,things.festive,things.cheese,things.fountain,things.key,things.woman,things.sword,things.card,],
-//                 [things.snail,things.mouse,things.swords,things.nut,things.beer,things.grapes,things.meat,things.apple,things.clown,things.bread,things.pan,things.jester,things.mother,things.fleur,things.study,things.bird,],
-//                 [things.wine,things.pear,things.orange,things.plate,things.man,things.court,things.tower,things.house,things.judge,things.lady,things.lock,things.up_down,things.flag,things.rainbow,things.trident,things.mustache,],
-//                 [things.books2,things.books3,things.books4,things.books5,things.books6,things.beaker,things.agri,things.world,things.books7,things.books0,things.dove,things.church,things.blonde_girl,things.books1,],
-//               ]
-
 
 emoji_map =  [
 
   //row 1
   [
 
-{
-        'emoji': ' ',
-        'wall':false,
-        'name':'blank',
-      },
+  {
+    'emoji': ' ',
+    'wall':false,
+    'name':'blank',
+  },
 
 
-{
-  'emoji': '🌳',
-  'wall': true,
-  'name':'tree',
+  {
+    'emoji': '🌳',
+    'wall': true,
+    'name':'tree',
   },
 
   {
@@ -515,7 +508,7 @@ emoji_map =  [
    },
 
 
-  {
+   {
       'emoji': '🎪',
       'wall': true,
       'name':'tent',
@@ -523,14 +516,14 @@ emoji_map =  [
 
 
 
-{
-    'emoji': '❤️',
-    'wall': false,
-    'name':  'heart',
-    'item': true,
+    {
+      'emoji': '❤️',
+      'wall': false,
+      'name':  'heart',
+      'item': true,
   },
 
-{
+  {
     'emoji': '💎',
     'wall': false,
     'name':'diamond',
@@ -540,6 +533,7 @@ emoji_map =  [
   {
       'emoji': '🔮',
       'name':'orb',
+      'wall':false,
     },
 
 
@@ -994,9 +988,9 @@ emoji_map =  [
   },
 
 {
-    'emoji': '👨🏿',
+    'emoji': '👴🏾',
     'wall': true,
-    'name':'judge',
+    'name':'old_bald_man',
   },
 
 {
@@ -1005,9 +999,9 @@ emoji_map =  [
     'lady':'name',
   },
  {
-    'emoji': '↕️',
+    'emoji': '🐶',
     'exitway': true,
-    'name':'up_down',
+    'name':'dog',
   },
 
 {
@@ -1164,14 +1158,14 @@ emoji_map =  [
     'name':'yellow_heart',
   },
   {
-    'emoji':'🇦🇽',
+    'emoji':'👩🏻',
     'wall':true,
-    'name':'flag4',
+    'name':'dark_hair_woman',
   },
   {
-    'emoji':'🇦🇱',
+    'emoji':'👲🏻',
     'wall':true,
-    'name':'flag5',
+    'name':'chinese_hat',
   },
   {
     'emoji':'👳🏿',
@@ -1344,17 +1338,15 @@ emoji_map =  [
     'name':'flag11',
   },
   {
-    'emoji':'🇳🇫',
+    'emoji':'',
     'wall':true,
     'name':'flag12',
   },
   {
-    'emoji':'🇸🇦',
+    'emoji':'📫',
     'wall':true,
-    'name':'flag13',
+    'name':'mailbox',
   },
-
-
 
 ],
 //r7
@@ -1539,9 +1531,9 @@ emoji_map =  [
     'name':'stop_sign',
   },
   {
-    'emoji':'🚫',
+    'emoji':'💤',
     'wall':true,
-    'name':'no_entry',
+    'name':'zzz',
   },
   {
     'emoji':'♨️',
@@ -1594,9 +1586,9 @@ emoji_map =  [
     'name':'thought_bubble',
   },
   {
-    'emoji':'🗯',
+    'emoji':'🛏',
     'wall':true,
-    'name':'comic_bubble',
+    'name':'bed',
   },
   {
     'emoji':'🚩',

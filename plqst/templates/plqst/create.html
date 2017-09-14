@@ -460,9 +460,10 @@ if (selected_item.hasOwnProperty("conditional_dialogue")){
 
 $("#set-conditional-dialogue").click(function(){
   window.cloned_item.conditional_dialogue = true
-  if ( (window.cloned_item.name != 'scroll') && (window.cloned_item.name != 'blank') && (window.cloned_item.name != 'key') ) {
-    window.cloned_item.wall = true
-  }
+  
+  // if ( (window.cloned_item.name != 'scroll') && (window.cloned_item.name != 'blank') && (window.cloned_item.name != 'key') ) {
+  //   window.cloned_item.wall = true
+  // }
   var cd_voice = $("input:radio[name ='cd-voice']:checked").val();
   var conditional_dialogue_key = $("#conditional-dialogue-key").val();
   var conditional_dialogue_title = $("#conditional-dialogue-title").val();
@@ -615,6 +616,7 @@ $(".emoji-choice").click(function(){
   selected = things[id]
   $("#current_emoji").text(selected.emoji);
 })
+
 $("#save-level").click(function(event){
   event.preventDefault();
   $.ajaxSetup({
