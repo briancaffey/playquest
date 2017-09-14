@@ -269,16 +269,11 @@ function displayUserItems() {
 }
 
 function vw_talkStarted(){
-    //var audio = document.getElementById("music-track");
     $("#music-track").animate({volume: 0.3}, 1000)
-    // $audio.animate({volume: newVolume}, 1000);
-    // audio.volume = 0.3;
 }
 
 function vw_talkEnded(){
-  //var audio = document.getElementById("music-track");
   $("#music-track").animate({volume: 1.0}, 1000)
-  // audio.volume = 1.0;
 }
 
 function checkSquare(square){
@@ -294,10 +289,10 @@ function checkSquare(square){
           console.log("no narration");
           break
         case "1":
-          sayText(square.conditional_dialogue_body,5,1,4);
+          setTimeout( function(){ sayText(square.conditional_dialogue_body,5,1,4); }  , 1000 );
           break;
         case "2":
-          sayText(square.conditional_dialogue_body,3,1,3);
+          setTimeout( function(){ sayText(square.conditional_dialogue_body,3,1,3); }  , 1000 );
           break;
       }
 
@@ -309,10 +304,10 @@ function checkSquare(square){
         console.log("no narration");
         break
       case "1":
-        sayText(square.dialogue_body,5,1,4);
+        setTimeout( function(){ sayText(square.conditional_dialogue_body,5,1,4); }  , 1000 );
         break;
       case "2":
-        sayText(square.dialogue_body,3,1,3);
+        setTimeout( function(){ sayText(square.conditional_dialogue_body,3,1,3); }  , 1000 );
         break;
     }
 
