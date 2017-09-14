@@ -1328,19 +1328,19 @@ emoji_map =  [
     'name':'flag9',
   },
   {
-    'emoji':'🇰🇬',
+    'emoji':'🌋',
     'wall':true,
-    'name':'flag10',
+    'name':'volcano',
   },
   {
-    'emoji':'🇱🇧',
+    'emoji':'🏔',
     'wall':true,
-    'name':'flag11',
+    'name':'snow_mountain',
   },
   {
-    'emoji':'',
+    'emoji':'⛰',
     'wall':true,
-    'name':'flag12',
+    'name':'mountain',
   },
   {
     'emoji':'📫',
@@ -1551,9 +1551,9 @@ emoji_map =  [
     'name':'question',
   },
   {
-    'emoji':'⁉️',
+    'emoji':'⛩',
     'wall':true,
-    'name':'exclamation_question',
+    'name':'temple',
   },
   {
     'emoji':'🌀',
