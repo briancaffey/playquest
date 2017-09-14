@@ -381,7 +381,7 @@ var pushKeys = window.addEventListener("keydown", function(event) {
        blockInfoModal.style.display = "none";
      } else {
        blockInfoModal.style.display = 'block'
-       window.cloned_item = _.clone(JSON.parse(JSON.stringify(game_data.game_data.game_data.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]])));
+       window.cloned_item = _.clone(JSON.parse(JSON.stringify(scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]])));
        showBlockInfo()
      }
    }
@@ -542,14 +542,14 @@ $("#start_btn").click(function(e){
       try {
         var start_scene = game_data["game_data"]["game_data"]["starting_scene"]
         window.current_scene = start_scene //game_data["game_data"]["game_data"]["current_scene"]
-        window.scenes = game_data["game_data"]["game_data"].scenes
+        window.scenes = game_data["game_data"]["game_data"]
         window.scene = game_data["game_data"]["game_data"].scenes[start_scene].grid
         window.player = game_data["game_data"]["game_data"]["player"]
 
       } catch (err) {
         var start_scene = game_data["game_data"]["starting_scene"]
         window.current_scene = game_data["game_data"]["starting_scene"]
-        window.scenes = game_data["game_data"].scenes
+        window.scenes = game_data["game_data"]
         window.scene = game_data["game_data"].scenes[start_scene].grid
         window.player = game_data["game_data"]["player"]
       };
