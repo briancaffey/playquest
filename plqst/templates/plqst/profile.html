@@ -45,7 +45,7 @@
 {% for game in user_games %}
 <p style="font-size:2em;"><a href="{{ game.play_url }}">{{ game.id }}</a></p>
 <p style="color:gray;">created on {{ game.game_created | date:"M d, 'y"}}</p>
-<p style="font-size:1.75em;"><a class="btn btn-default" href="{% url 'plqst:game_id' id=game.id %}">▶️&nbsp;&nbsp;Play </a> | <a class="btn btn-default" href="{% url 'plqst:edit_game' id=game.id %}">🛠&nbsp;&nbsp;Edit</a> | <a class="btn btn-default" href="{% url 'plqst:delete_game' id=game.id %}">🗑&nbsp;&nbsp;Delete</a></p>
+<p style="font-size:1.75em;"><a class="btn btn-default" href="{% url 'plqst:game_id' id=game.id %}">▶️&nbsp;&nbsp;Play </a>  <a class="btn btn-default" href="{% url 'plqst:edit_game' id=game.id %}">🛠&nbsp;&nbsp;Edit</a>  <a class="btn btn-default" href="{% url 'plqst:delete_game' id=game.id %}">🗑&nbsp;&nbsp;Delete</a></p>
 <br />
 {% endfor %}
 </div>
