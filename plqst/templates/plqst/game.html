@@ -285,7 +285,7 @@ function checkSquare(square){
     if (square.hasOwnProperty("conditional_dialogue") && _.contains(player.keys, square.conditional_dialogue_key)){
 
       $("#dialogue-title").text(square.conditional_dialogue_title);
-      $("#dialogue-body").text(square.dialogue_body);
+      $("#dialogue-body").text(square.conditional_dialogue_body);
       switch (square.voice) {
         case "0":
           console.log("no narration");
