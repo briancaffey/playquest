@@ -327,8 +327,7 @@ function checkSquare(square){
     player.scrolls.push(square)
   }
 
-  //key
-  if ( square.name == 'key' ) {
+  if ( square.hasOwnProperty("key_name")){
     player.keys.push(square.key_name)
   }
 
