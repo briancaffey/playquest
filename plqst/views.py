@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Game
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.models import UserProfile
+
+from django.contrib import messages
 
 # Create your views here.
 
@@ -53,6 +55,14 @@ def edit_game(request, id):
     else:
         context = {}
     return render(request, 'plqst/edit.html', context)
+
+def delete_game(request, id):
+    game = Game.objects.get(id=id)
+    game.delete()
+    messages.success(request, "Your game has been deleted.")
+    return redirect('plqst:profile')
+
+
 
 def user_profile(request, username):
     u = User.objects.get(username=username)
