@@ -30,7 +30,7 @@
         <div style="text-align:center;" class="jumbotron" >
           <h1>👑⚔🏰🐉❤️<br />Create your own PlayQuest</h1>
           <br />
-          <a id="start_btn" class="btn btn-success btn-lg togglePlay" href="" class="togglePlay">Get Started!</a>
+          <a id="start_btn" class="btn btn-success btn-lg togglePlay" href="#start" class="togglePlay">Get Started!</a>
         </div>
       </div>
       <style>
@@ -260,48 +260,37 @@ var blank_scene =   {'grid':
                     },
                   }
 
-var scenes = {
-                'starting_scene':'0',
-                'title':null,
-                'user':null,
-                'current_scene':'0',
-                'scenes':{
-                  '0':
-                    {'grid':
-                      {0:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       1:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       2:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       3:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       4:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       5:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       6:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       7:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       8:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
-                       9:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},]
-                  },
-                }
-              }
-            }
-
+// var scenes = {
+//                 'starting_scene':'0',
+//                 'title':null,
+//                 'user':null,
+//                 'current_scene':'0',
+//                 'scenes':{
+//                   '0':
+//                     {'grid':
+//                       {0:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        1:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        2:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        3:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        4:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        5:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        6:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        7:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        8:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},],
+//                        9:[{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',}, {'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},{'emoji': '🌳','wall': true,'name':'tree',},]
+//                   },
+//                 }
+//               }
+//             }
 
 function updateSceneList(){
-  $("#scene-list").empty();
   var scene_names = get_scene_names(scenes.scenes);
   for (var s in scene_names){
     if (scene_names[s] == scenes.current_scene){
-      if (scenes.scenes[s].hasOwnProperty("scene_title")) {
-        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>" + scenes.scenes[s].scene_title +"</a><br />")
-      } else {
-        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene " + s +"</a><br />")
-      }
-
+      $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene #" + s +"</a><br />")
     } else{
-      if (scenes.scenes[s].hasOwnProperty("scene_title") ){
-        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>" + scenes.scenes[s].scene_title +"</a><br />")
-      } else {
-        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene " + s +"</a><br />")
-      }
-  }
+      $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene #" + s +"</a><br />")
+    }
   }
 }
 
@@ -322,8 +311,6 @@ $("#scene-list").on("click","a", function(){
   updateStats();
   $("#scene-list").empty();
   updateSceneList();
-
-
 })
 
 var pointer = {
@@ -334,7 +321,7 @@ var emoji_pointer = {
   current: [0,0],
 }
 
-updateStats()
+//updateStats()
 function buildEmojiMenu(){
     $('#emojis tr').remove();
     for (row in emoji_map){
@@ -352,11 +339,11 @@ var scene = null;
 function buildScene(init){
   if (init){
     var building_scene = scenes.scenes[scenes[init]].grid;
+    console.log("building scene init worked");
   } else {
-  var building_scene = scenes.scenes[scenes["current_scene"]].grid;
+  var building_scene = scenes[current_scene].grid
   }
   $("tbody tr").remove();
-
   for (row in building_scene){
     var current = $('.grid tbody').append("<tr class='emoji_row' row="+row+"></tr>")
     for (square in building_scene[row]){
@@ -371,33 +358,9 @@ function buildScene(init){
 function updateSquare(){
   var map_x = pointer.current[0]
   var map_y = pointer.current[1]
+  //scenes[current_scene].grid[map_x][map_y] = selected
   scenes.scenes[scenes["current_scene"]].grid[map_x][map_y] = selected
 }
-
-function showSettings(){
-  $("#game-title").val("");
-  $("#scene-title").val("");
-
-  if (scenes.hasOwnProperty("game_title")){
-    $("#game-title").val(scenes.game_title)
-  }
-
-  if (scenes.scenes[scenes["current_scene"]].hasOwnProperty("scene_title")){
-    $("#scene-title").val(scenes.scenes[scenes["current_scene"]].scene_title);
-  }
-
-  $("#save-settings").click(function(){
-    var scene_title = $("#scene-title").val();
-    var game_title = $("#game-title").val();
-    scenes.scenes[scenes["current_scene"]].scene_title = scene_title
-    scenes.game_title = game_title
-    updateStats();
-    updateSceneList();
-
-  })
-}
-
-
 function showBlockInfo(){
   $("#blockInfo p").empty();
   $("#vertical-select").empty();
@@ -406,11 +369,7 @@ function showBlockInfo(){
   $("#current_emoji").text(cloned_item.emoji)
   var scene_names = get_scene_names(scenes.scenes);
   for (var s in scene_names){
-    if (scenes.scenes[s].hasOwnProperty("scene_title")){
-      $("#portal-select").append("<option value='"+s+"'>" + scenes.scenes[s].scene_title + " ["+s+"]</option>")
-    } else {
-      $("#portal-select").append("<option value='"+s+"'>Scene #"+s+"</option>")
-    }
+    $("#portal-select").append("<option value='"+s+"'>Scene #"+s+"</option>")
   }
   for (var v in scenes.scenes[scenes["current_scene"]].grid){
     $("#vertical-select").append("<option value='"+v+"'>"+v+"</option>")
@@ -438,152 +397,47 @@ function showBlockInfo(){
     scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
     $("#block-transition-saved").html("<span style='color:green;'>  Set!</span>")
   })
-
-  $("#simple-dialogue-title").val("");
-  $("#simple-dialogue-body").val("");
-  if (selected_item.dialogue) {
-    $("#simple-dialogue-title").val(selected_item.dialogue_title);
-    $("#simple-dialogue-body").val(selected_item.dialogue_body);
-  }
-
-  $("#set-dialogue-button").click(function(){
-    window.cloned_item.dialogue = true
-    if ( (window.cloned_item.name != 'scroll') && (window.cloned_item.name != 'blank') && (window.cloned_item.name != 'key') ) {
-      window.cloned_item.wall = true
-    }
-    var voice = $("input:radio[name ='voice']:checked").val();
-    console.log(voice);
-    var dialogue_title = $("#simple-dialogue-title").val();
-    var dialogue_body = $("#simple-dialogue-body").val();
-    window.cloned_item.voice = voice
-    window.cloned_item.dialogue_title = dialogue_title
-    window.cloned_item.dialogue_body = dialogue_body
-    scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
-  })
-
-//clear cd input and set if it exists
-$("#conditional-dialogue-key").val("")
-$("#conditional-dialogue-title").val("")
-$("#conditional-dialogue-body").val("")
-if (selected_item.hasOwnProperty("conditional_dialogue")){
-  $("#conditional-dialogue-key").val(selected_item.conditional_dialogue_key)
-  $("#conditional-dialogue-title").val(selected_item.conditional_dialogue_title)
-  $("#conditional-dialogue-body").val(selected_item.conditional_dialogue_body)
-}
-
-$("#set-conditional-dialogue").click(function(){
-  window.cloned_item.conditional_dialogue = true
-
-  // if ( (window.cloned_item.name != 'scroll') && (window.cloned_item.name != 'blank') && (window.cloned_item.name != 'key') ) {
-  //   window.cloned_item.wall = true
-  // }
-  var cd_voice = $("input:radio[name ='cd-voice']:checked").val();
-  var conditional_dialogue_key = $("#conditional-dialogue-key").val();
-  var conditional_dialogue_title = $("#conditional-dialogue-title").val();
-  var conditional_dialogue_body = $("#conditional-dialogue-body").val();
-  window.cloned_item.cd_voice = cd_voice
-  window.cloned_item.conditional_dialogue_key = conditional_dialogue_key
-  window.cloned_item.conditional_dialogue_title = conditional_dialogue_title
-  window.cloned_item.conditional_dialogue_body = conditional_dialogue_body
-  scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
-})
-
-//clear key input and set it if it exists
-$("#key-value").val("");
-if (selected_item.hasOwnProperty("key_name")){
-  $("#key-value").val(selected_item.key_name);
-}
-
-$("#set-key").click(function(){
-  var key_name = $("#key-value").val();
-  window.cloned_item.key_name = key_name
-  window.cloned_item.wall = false
-  scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
-})
-
-//clear lock input and set it if it exists
-$("#lock-value").val("");
-if (selected_item.hasOwnProperty("lock_name")){
-  $("#lock-value").val(selected_item.lock_name)
-}
-
-$("#set-lock").click(function(){
-  var lock_name = $("#lock-value").val();
-  window.cloned_item.lock_name = lock_name
-  scenes.scenes[scenes["current_scene"]].grid[pointer.current[0]][pointer.current[1]] = window.cloned_item
-})
-
   showBlockInfoModal();
 }
 
 function updateStats(){
-  if (scenes.scenes[scenes["current_scene"]].hasOwnProperty("scene_title")) {
-    $("#scene-name").text(scenes.scenes[scenes["current_scene"]].scene_title)
-  } else {
-    $("#scene-name").text(scenes.current_scene)
-  }
-
+  $("#scene-name").text(scenes.current_scene)
   $("#pointer-pos").text(pointer.current)
-  $("#active-emoji").text(emoji_map[emoji_pointer.current[0]][emoji_pointer.current[1]].emoji)
 }
 
 var pushKeys = window.addEventListener("keydown", function(event) {
-  if ($("#simple-dialogue-body").is(":focus") ||
-      $("#simple-dialogue-title").is(":focus") ||
-      $("#key-value").is(":focus") ||
-      $("#lock-value").is(":focus") ||
-      $("#conditional-dialogue-key").is(":focus") ||
-      $("#conditional-dialogue-title").is(":focus") ||
-      $("#conditional-dialogue-body").is(":focus") ||
-      $("#scene-title").is(":focus") ||
-      $("#game-title").is(":focus") ){
-
-  } else {
-
-
-
   if (event.keyCode == 81){
     $('#help-modal').modal('toggle');
-  }
-  if (event.keyCode == 84){
-    $("#settings-modal").modal('toggle');
-    showSettings();
   }
  if (modal.style.display == 'block'){
 
    if (event.keyCode == 69){
      event.preventDefault();
      modal.style.display = 'none';
-     updateStats();
    }
    if (event.keyCode == 40 || event.keyCode == 83){
      event.preventDefault();
      emoji_pointer.current[0]++
-     updateEmojiMenu();
-     updateStats();
+     updateEmojiMenu()
      }
    if (event.keyCode == 38 || event.keyCode == 87){
      event.preventDefault();
      emoji_pointer.current[0]--
-     updateEmojiMenu();
-     updateStats();
+     updateEmojiMenu()
      }
    if (event.keyCode == 37 || event.keyCode == 65){
      event.preventDefault();
      emoji_pointer.current[1]--
-     updateEmojiMenu();
-     updateStats();
+     updateEmojiMenu()
      }
    if (event.keyCode == 39 || event.keyCode == 68){
      event.preventDefault();
      emoji_pointer.current[1]++
-     updateEmojiMenu();
-     updateStats();
+     updateEmojiMenu()
      }
    if (event.keyCode == 32){
      event.preventDefault();
      modal.style.display = 'none';
-     updateStats();
    }
    buildEmojiMenu();
  }else {
@@ -624,7 +478,6 @@ var pushKeys = window.addEventListener("keydown", function(event) {
     updateStats();
   }
   buildScene();
-}
 });
 
 function updateEmojiMenu(){
@@ -646,8 +499,8 @@ $(".emoji-choice").click(function(){
   selected = things[id]
   $("#current_emoji").text(selected.emoji);
 })
-
 $("#save-level").click(function(event){
+
   event.preventDefault();
   $.ajaxSetup({
        beforeSend: function(xhr, settings) {
@@ -672,61 +525,30 @@ $("#save-level").click(function(event){
            }
        }
   });
-  if (window.game_id == null){
-    var game_id_hash = _.random(10, 1000000)
-  $.ajax({
-    type : "POST",
-    url : "/api/save/",
-    csrfmiddlewaretoken: "{{ csrf_token }}",
-    data : JSON.stringify({game_data:scenes, id:game_id_hash}),
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    success: function(data){
-        //console.log(data)
-        window.game_id = data["id"]
-        console.log(data.id)
-        window.APIUpdateURL = "/api/"+String(window.game_id)+"/update/"
-        var pathArray = location.href.split( '/' );
-        var protocol = pathArray[0];
-        var host = pathArray[2];
-        var url = protocol + '//' + host;
-        var game_url = "/game/"+String(window.game_id) + "/"
-        var full_url = url + game_url;
-        $('#new_game_link').attr('href',full_url);
-        $('#new_game_link_button').attr('href', full_url);
-        $('#new_game_link').text(full_url);
-        $('#myModal-saved').modal("show");
-        history.pushState(scenes, "", game_url);
-    },
-    error: function(XMLHttpRequest, textStatus, errorThrown) {
 
-      alert("some error " + String(errorThrown) + String(textStatus) + String(XMLHttpRequest.responseText));
-    }
-  });
-} else {
-  console.log("attempting PUT");
-  window.APIUpdateURL = "/api/"+String(window.game_id)+"/update/"
-  console.log(window.APIUpdateURL);
+  if (game_data.game_data.game_data != undefined) {
+    window.send_data = game_data.game_data.game_data
+  } else {
+    window.send_data = game_data.game_data
+  }
+
   $.ajax({
     type : "PUT",
-    url : window.APIUpdateURL,
+    url: "/api/"+"{{ game_id }}"+"/update/",
     csrfmiddlewaretoken: "{{ csrf_token }}",
-    data : JSON.stringify({game_data:scenes, id:window.game_id}),
+    data : JSON.stringify({game_data:send_data, id:String("{{ game_id }}")}),
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     success: function(data){
         window.game_id = data["id"]
-        window.APIUpdateURL = "/api/"+String(window.game_id)+"/update/"
         var pathArray = location.href.split( '/' );
         var protocol = pathArray[0];
         var host = pathArray[2];
         var url = protocol + '//' + host;
-        var game_url = "/game/"+String(game_id)+"/"
-        var full_url = url + game_url
+        var game_url = "/game/"+String(game_id)+"/";
+        var full_url = url + game_url;
         $('#new_game_link').attr('href',full_url);
         $('#new_game_link').text(full_url);
         $('#myModal-saved').modal("show");
@@ -735,7 +557,7 @@ $("#save-level").click(function(event){
       alert("some error " + String(errorThrown) + String(textStatus) + String(XMLHttpRequest.responseText));
       }
     });
-  }
+
 });
 $('#start_btn').focus();
 var blockInfoModal = document.getElementById('blockInfoModal');
@@ -764,7 +586,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-// })();
 
 $("#start_btn").click(function(e){
   e.preventDefault()
@@ -786,14 +607,14 @@ $("#start_btn").click(function(e){
       if (game_data.game_data.game_data != undefined) {
         var start_scene = game_data["game_data"]["game_data"]["starting_scene"]
         window.current_scene = start_scene //game_data["game_data"]["game_data"]["current_scene"]
-        window.scenes = game_data["game_data"]["game_data"]
+        window.scenes = game_data["game_data"]["game_data"].scenes
         window.scene = game_data["game_data"]["game_data"].scenes[start_scene].grid
         window.player = game_data["game_data"]["game_data"]["player"]
 
       } else {
         var start_scene = game_data["game_data"]["starting_scene"]
         window.current_scene = game_data["game_data"]["starting_scene"]
-        window.scenes = game_data["game_data"]
+        window.scenes = game_data["game_data"].scenes
         window.scene = game_data["game_data"].scenes[start_scene].grid
         window.player = game_data["game_data"]["player"]
       };
