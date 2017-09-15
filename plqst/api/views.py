@@ -40,6 +40,7 @@ class GameDetailAPIView(RetrieveAPIView):
 class GameUpdateAPIView(UpdateAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+    parser_classes = (JSONParser,)
 
     def perform_update(self, serializer):
         # get the object itself
@@ -47,3 +48,4 @@ class GameUpdateAPIView(UpdateAPIView):
 
         # modify fields during the update
         modified_instance = serializer.save()
+        
