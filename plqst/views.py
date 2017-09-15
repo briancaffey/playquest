@@ -54,7 +54,7 @@ def edit_game(request, id):
             print("You can't edit this game, but you can branch it")
     else:
         context = {}
-    return render(request, 'plqst/edit.html', context)
+    return render(request, 'plqst/edit1.html', context)
 
 def delete_game(request, id):
     game = Game.objects.get(id=id)
