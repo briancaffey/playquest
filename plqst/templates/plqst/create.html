@@ -132,7 +132,7 @@
         <h1>Scenes 🎞</h1>
         <button class="btn btn-warning" id="add-scene">Add New Scene</button>
         <div style="text-align:center;" id="scene-list" class="modal-body">
-          <a name="first"><button class="btn btn-success">Scene #0</button></a>
+          <a name="first"><button class="btn btn-success">Scene 0</button></a>
         </div>
           <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
       </div>
@@ -312,13 +312,22 @@ var scenes = {
 
 
 function updateSceneList(){
+  $("#scene-list").empty();
   var scene_names = get_scene_names(scenes.scenes);
   for (var s in scene_names){
     if (scene_names[s] == scenes.current_scene){
-      $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene #" + s +"</a><br />")
+      if (scenes.scenes[s].hasOwnProperty("scene_title")) {
+        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>" + scenes.scenes[s].scene_title +"</a><br />")
+      } else {
+        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-success'>Scene " + s +"</a><br />")
+      }
 
     } else{
-      $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene #" + s +"</a><br />")
+      if (scenes.scenes[s].hasOwnProperty("scene_title") ){
+        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>" + scenes.scenes[s].scene_title +"</a><br />")
+      } else {
+        $("#scene-list").append("<a style='cursor:pointer;' id='"+s+"' class='scene-menu-choice btn btn-primary'>Scene " + s +"</a><br />")
+      }
   }
   }
 }
@@ -409,7 +418,9 @@ function showSettings(){
     var game_title = $("#game-title").val();
     scenes.scenes[scenes["current_scene"]].scene_title = scene_title
     scenes.game_title = game_title
-    
+    updateStats();
+    updateSceneList();
+
   })
 }
 
@@ -422,7 +433,11 @@ function showBlockInfo(){
   $("#current_emoji").text(cloned_item.emoji)
   var scene_names = get_scene_names(scenes.scenes);
   for (var s in scene_names){
-    $("#portal-select").append("<option value='"+s+"'>Scene #"+s+"</option>")
+    if (scenes.scenes[s].hasOwnProperty("scene_title")){
+      $("#portal-select").append("<option value='"+s+"'>" + scenes.scenes[s].scene_title + " ["+s+"]</option>")
+    } else {
+      $("#portal-select").append("<option value='"+s+"'>Scene #"+s+"</option>")
+    }
   }
   for (var v in scenes.scenes[scenes["current_scene"]].grid){
     $("#vertical-select").append("<option value='"+v+"'>"+v+"</option>")
@@ -529,14 +544,26 @@ $("#set-lock").click(function(){
 }
 
 function updateStats(){
+  if (scenes.scenes[scenes["current_scene"]].hasOwnProperty("scene_title")) {
+    $("#scene-name").text(scenes.scenes[scenes["current_scene"]].scene_title)
+  } else {
+    $("#scene-name").text(scenes.current_scene)
+  }
 
-  $("#scene-name").text(scenes.current_scene)
   $("#pointer-pos").text(pointer.current)
   $("#active-emoji").text(emoji_map[emoji_pointer.current[0]][emoji_pointer.current[1]].emoji)
 }
 
 var pushKeys = window.addEventListener("keydown", function(event) {
-  if ($("#simple-dialogue-body").is(":focus") || $("#simple-dialogue-title").is(":focus") || $("#key-value").is(":focus") || $("#lock-value").is(":focus") || $("#conditional-dialogue-key").is(":focus") || $("#conditional-dialogue-title").is(":focus") || $("#conditional-dialogue-body").is(":focus") ){
+  if ($("#simple-dialogue-body").is(":focus") ||
+      $("#simple-dialogue-title").is(":focus") ||
+      $("#key-value").is(":focus") ||
+      $("#lock-value").is(":focus") ||
+      $("#conditional-dialogue-key").is(":focus") ||
+      $("#conditional-dialogue-title").is(":focus") ||
+      $("#conditional-dialogue-body").is(":focus") ||
+      $("#scene-title").is(":focus") ||
+      $("#game-title").is(":focus") ){
 
   } else {
 
