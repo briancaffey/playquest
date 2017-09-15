@@ -132,19 +132,84 @@
       <p id="dialogue-title" style="text-align:center; font-size:6em"><span id="current_emoji"></span></p>
       <p id="blockInfo" style="font-size:3em;"></p>
       <hr>
-      <h3>Scene transition</h3>
-      <div class="row">
+      <h3 href="" data-toggle="collapse" data-target="#trans"><a style="cursor:pointer;">Scene transition</a></h3>
+      <div id="trans" class="row collapse">
         <div class="col-md-3">Transfer to scene: <select style="width:200px" class="form-control" id="portal-select"></select></div>
         <div class="col-md-3">Vertical: <select style="width:200px" class="form-control" id="vertical-select"></select></div>
         <div class="col-md-3">Horizontal: <select style="width:200px" class="form-control" id="horizontal-select"></select></div>
         <div class="col-md-3"><b><br /></b><button id="set-portal-button" class="btn btn-success">Set</button>&nbsp;&nbsp;&nbsp;<span id="block-transition-saved"><br /></span></div>
       </div>
+
       <hr>
-      <h3>Simple dialogue</h3>
+
+      <h3 data-toggle="collapse" data-target="#dialogue"><a style="cursor:pointer;">Dialogue</a></h3>
+      <div id="dialogue" class="collapse">
       <input id="simple-dialogue-title" class="form-control text-input"></input><br />
       <textarea id="simple-dialogue-body" rows="4" class="form-control text-input"></textarea>
+      <br />
+      <div class="row">
+        <div class="col-md-12">Voice:
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default active">
+              <input type="radio" name="voice" checked autocomplete="off" value=1>👨🏻&nbsp;&nbsp;Dan 🇬🇧
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="voice" autocomplete="off" value=2>👩🏽&nbsp;&nbsp;Mary 🇺🇸
+            </label>
+            <label class="btn btn-default">
+              <input type="radio" name="voice" autocomplete="off" value=0>🔇 None
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <br />
+      <button id="set-dialogue-button" class="btn btn-success">Set Dialogue</button>
+    </div>
+
       <hr>
-      <h3>Last property</h3>
+      <div>
+      <h3 data-toggle="collapse" data-target="#conditional-dialogue"><a style="cursor:pointer;">Conditional Dialogue</a></h3>
+      <div id="conditional-dialogue" class="collapse">
+        <small>This dialogue will show if the player has the <b>key</b> you specify. Otherwise the simple dialogue will show. </small>
+        <input id="conditional-dialogue-key" class="form-control text-input" placeholder="enter the name of the key needed to show this dialogue"></input></br>
+        <input id="conditional-dialogue-title" class="form-control text-input"></input><br />
+        <textarea id="conditional-dialogue-body" rows="4" class="form-control text-input"></textarea>
+        <br />
+        <div class="row">
+          <div class="col-md-12">Voice:
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="cd-voice" checked autocomplete="off" value=1>👨🏻&nbsp;&nbsp;Dan 🇬🇧
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="cd-voice" autocomplete="off" value=2>👩🏽&nbsp;&nbsp;Mary 🇺🇸
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="cd-voice" autocomplete="off" value=0>🔇 None
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <button id="set-conditional-dialogue" class="btn btn-success">Set Conditional Dialogue</button>
+      </div>
+      </div>
+      <hr>
+
+      <h3 data-toggle="collapse" data-target="#key"><a style="cursor:pointer;">Key</a></h3>
+      <div id="key" class="collapse">
+      <small>You can "unlock" certain items with keys</small>
+      <input id="key-value" class="form-control text-input" placeholder="enter the name of this key"></input><br />
+      <button id="set-key" class="btn btn-success">Set Key Name</button>
+    </div>
+    <hr>
+      <h3 data-toggle="collapse" data-target="#lock"><a style="cursor:pointer;">Lock</a></h3>
+      <div class="collapse" id="lock">
+      <small>Items with "lock" can be accessed once you have the corresponding key. The lock value must match the key value <b>EXACTLY!!!</b>.</small>
+      <input id="lock-value" class="form-control text-input" placeholder="enter the name of the lock (it should have a key with the same name)"></input><br/>
+      <button id="set-lock" class="btn btn-success">Set Lock Name</button>
+    </div>
     </div>
   </div>
 
