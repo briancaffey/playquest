@@ -63,13 +63,17 @@
           <h1>Your game has been saved! 💾✅👌</h1>
           <p>Here's the link to play this game: <b><a id="new_game_link" href="" target="_blank">link</a></b></p>
           <a class="btn btn btn-success" id="new_game_link_button" href="">play</a>
-          <br />
-          <p>the game you just made will be saved to your profile if you create an account with the button below</p>
-          <p>if you don't make an account, anyone with the edit link will be able to edit this game</p>
-          <button class="btn btn-success" href="">create account</button>
-        </div>
+          {% if request.user.is_authenticated %}
+          <p>This game will be displayed on <a href="{% url 'plqst:user_profile' username=request.user.username %}">your PlayQuest profile page</a>.</p>
+          {% else %}
+          <p>The game you just made will be saved to your profile if you create an account with the button below.</p>
+          <p>If you don't make an account now, anyone with the edit link will be able to make changes to this game.</p>
+          <button class="btn btn-success" href="">Create a Free Account</button>
+          {% endif %}
           <p>you can keep working on this game if you want, just remember to save your progress!</p>
           <button type="button" class="btn btn-default" data-dismiss="modal">keep going</button>
+        </div>
+
       </div>
     </div>
   </div>
