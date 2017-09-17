@@ -569,6 +569,8 @@ var startClock = function(){setInterval(function updateClock(){
 };
 
 $("#start_btn").click(function(e){
+  $("#music-track").load();
+  $("#music-track").play();
   e.preventDefault()
 
   $(this).text('Stop');
