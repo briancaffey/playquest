@@ -353,7 +353,7 @@ var start = function(){
   // create a simple instance
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere);
-
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
   // listen to events...
   mc.on("swipeleft", function(ev) {
     ev.preventDefault();
@@ -377,7 +377,7 @@ var start = function(){
     buildScene();
   });
 
-  mc.on("swipeup", function(ev) {
+  mc.on("swipe up", function(ev) {
     ev.preventDefault();
     console.log("swiped right");
     var current = player.current[1];
