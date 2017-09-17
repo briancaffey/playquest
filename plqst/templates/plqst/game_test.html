@@ -348,14 +348,14 @@ function checkSquare(square){
 
 var start = function(){
 
-  var myElement = document.getElementById('main-canvas');
+  var anywhere = $("body");
 
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var mc = new Hammer(myElement);
+  var mc = new Hammer(anywhere);
 
   // listen to events...
-  mc.on("panleft", function(ev) {
+  mc.on("swipeleft", function(ev) {
     ev.preventDefault();
     console.log("swiped");
     var current = player.current[1];
