@@ -352,11 +352,11 @@ var start = function(){
 
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var options  = {
-    drag: false, 
-    dragBlockVertical: true,
-    preventDefaults: true
-  }
+  mc.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 1,
+    velocity:0.1
+  });
   var mc = new Hammer(anywhere, options);
   // listen to events...
   mc.on("swipeleft", function(ev) {
