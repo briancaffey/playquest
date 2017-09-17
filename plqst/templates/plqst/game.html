@@ -40,7 +40,7 @@
               <li><a class="btn" id='items-button' type="button" data-toggle="modal" data-target="#item-modal">Items 🎒</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              {% if request.user.username == game.game_owner %}
+              {% if request.user == game.game_owner %}
               <li><a class="btn" id="branch-menu" type="button" data-toggle="modal" data-target="#branch-modal">Branch 🌿</a></li>
               <li><a class="btn" type="button" href="{% url 'plqst:edit_game' id=game.id %}">Edit 📝</a></li>
               {% else %}
