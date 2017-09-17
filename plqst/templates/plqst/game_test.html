@@ -571,7 +571,8 @@ var startClock = function(){setInterval(function updateClock(){
 $("#start_btn").click(function(e){
 
   e.preventDefault()
-  $("#music-track").play();
+  var musictrack = document.getElementById("music-track")
+  musictrack.play();
   $(this).text('Stop');
   $('#welcomeJumbo').hide();
   $('.stat').show();
