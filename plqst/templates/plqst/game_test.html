@@ -402,6 +402,7 @@ var start = function(){
     var next_square = scene[next_][player.current[1]];
     move(next_square, 0, "+");
     checkSquare(next_square);
+    buildScene();
   });
 
 // mc.on("swipe", function(ev) {
