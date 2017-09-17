@@ -36,6 +36,19 @@ def game_id(request, id):
 		context = {}
 	return render(request, 'plqst/game.html', context)
 
+def game_id_test(request, id):
+	game = Game.objects.filter(id=id)
+
+	if len(game) == 1:
+		context = {
+			'game':game[0],
+			'game_id': id,
+			}
+	else:
+		context = {}
+	return render(request, 'plqst/game_test.html', context)
+
+
 def create(request):
 	return render(request, 'plqst/create.html', {})
 
