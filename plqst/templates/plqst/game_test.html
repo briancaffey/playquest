@@ -148,7 +148,7 @@
 
 
 
-  <div style="background-color:" class="container">
+  <div style="background-color:" class="container" id="main-canvas">
     <div class="row">
 
       </div>
@@ -174,7 +174,7 @@
 </span>
 
 <div style="padding-top:40px;">
-<div style="align:center;" class="canvas" id="main-canvas">
+<div style="align:center;" class="canvas">
   <table style="font-size:3.5em;" class="grid">
     <tbody id="scene"></tbody>
   </table>
@@ -348,7 +348,7 @@ function checkSquare(square){
 
 var start = function(){
 
-  var anywhere = $("body");
+  var anywhere = document.getElementById("main-canvas")
 
   // create a simple instance
   // by default, it only adds horizontal recognizers
