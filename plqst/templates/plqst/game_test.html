@@ -641,7 +641,7 @@ $("#start_btn").click(function(e){
   e.preventDefault()
   var audio_src = "{% static 'music/plirwin.ogg' %}"
   var musictrack = document.getElementById("music-track")
-  musictrack.play();
+
   musictrack.src = audio_src
   musictrack.play();
   $(this).text('Stop');
