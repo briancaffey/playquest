@@ -19,7 +19,12 @@
 
 </head>
 
+
+
+
+
 <body style="padding-top:30px;">
+
 
 <script language="JavaScript" type="text/javascript" src="https://vhss.oddcast.com/vocalware_embed_functions.php?acc=6470708&js=1"></script><script language="JavaScript" type="text/javascript">AC_Vocalware_Embed(6470708,300, 400,'',1,1, 2577191, 0,1,0,'0bf911d2ae96897e101868855bd4e0eb',9);</script>
 
@@ -65,9 +70,14 @@
           <div class="modal-content">
             <div style="text-align:center;" class="modal-body">
               <h1>🎻🎹🎶</h1>
-              <audio id="music-track" loop="loop" audio="" controls="controls">
+              <!-- <audio id="music-track" loop="loop" audio="" controls="controls">
                     <source src="{% static 'music/plirwin.ogg' %}">
                     <embed type="application/x-shockwave-flash" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" quality="best" width="500" height="27">
+                    </audio> -->
+
+  <audio id="music-track" loop="loop" audio="" controls="controls">
+                    <!-- <source src="{% static 'music/plirwin.ogg' %}"> -->
+                    <!-- <embed type="application/x-shockwave-flash" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" quality="best" width="500" height="27"> -->
                     </audio>
             </div>
             <div class="modal-footer">
@@ -629,7 +639,10 @@ var startClock = function(){setInterval(function updateClock(){
 $("#start_btn").click(function(e){
 
   e.preventDefault()
+  var audio_src = "{% static 'music/plirwin.ogg' %}"
   var musictrack = document.getElementById("music-track")
+  musictrack.play();
+  musictrack.src = audio_src
   musictrack.play();
   $(this).text('Stop');
   $('#welcomeJumbo').hide();
