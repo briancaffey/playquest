@@ -64,14 +64,14 @@ def edit_game(request, id):
                 'game_id':str(game.first().id)
             }
         else:
-            print("You can't edit this game, but you can branch it")
+            messages.success(request, "You can't edit this game, but you can branch it")
     else:
         context = {}
     return render(request, 'plqst/edit.html', context)
 
 def delete_game(request, id):
     game = Game.objects.get(id=id)
-    game.delete()
+    #game.delete()
     messages.success(request, "Your game has been deleted.")
     return redirect('plqst:profile')
 
