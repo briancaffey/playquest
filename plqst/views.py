@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Game
+from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.models import UserProfile
@@ -22,7 +23,7 @@ def playquest_home(request):
     return render(request, 'plqst/playquest_home.html', context)
 
 def demo(request):
-	return render(request, 'plqst/demo.html', {})
+	return reverse('plqst:game_id', args='LbVgnYL')
 
 def game_id(request, id):
 	game = Game.objects.filter(id=id)
