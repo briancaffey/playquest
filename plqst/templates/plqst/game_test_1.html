@@ -370,8 +370,9 @@ var start = function(){
   // create a simple instance
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere);
+  var pinch = new Hammer.Pinch();
   // mc.add(new Hammer.Pan({ threshold: 300 }))
-  mc.add("pinch");
+  mc.add(pinch);
   mc.get('pinch').set({ enable: true });
   mc.on("pinch", function(ev) {
     console.log("Pinching");
