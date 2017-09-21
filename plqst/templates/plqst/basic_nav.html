@@ -14,7 +14,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="#about">📋&nbsp;&nbsp;About</a>
+          <a href="{% url 'plqst:about' %}">📋&nbsp;&nbsp;About</a>
         </li>
         {% if request.user.is_authenticated %}
         <li>

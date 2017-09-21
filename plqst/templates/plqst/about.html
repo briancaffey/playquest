@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+<head>
+  <title>PlayQuest</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.7/assets/css/emojione.min.css"/> -->
+</head>
+
+<body style="padding-top:30px;">
+
+{% include 'plqst/basic_nav.html' %}
+
+<div class="container">
+  <br /><br />
+  <div class="embed-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/3ZrH4jQ70cg?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+<h2>About PlayQuest</h2>
+
+<p>PlayQuest is a platform for creating interactive games and stories with emoji.</p>
+<p>In just minutes, you can create a simple, interactive and fun PlayQuest game. Choose from over 800 supported emoji to build your scenes, characters, special items, or whatever you can think of! Then play and share your game instantly, right in your browser on any device!</p>
+
+
+
+</div>
+
+{% include 'plqst/footer.html' %}
+</body>

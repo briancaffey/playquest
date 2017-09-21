@@ -8,6 +8,9 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 # Create your views here.
 
+def about(request):
+    return render(request, 'plqst/about.html', {})
+
 def playquest_home(request):
     featured_games = Game.objects.filter(game_featured=True)[:5]
     recent_games = Game.objects.all()[:5]
