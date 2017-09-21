@@ -24,6 +24,8 @@
 
 <div class="container">
 <h2>{{ user_profile.user.username }}'s Profile</h2>
+<p>{{ user_profile.description | safe }}</p>
+{% if user_profile.twitter %}<a href="https://twitter.com/{{ user_profile.twitter }}">{{ user_profile.twitter }}</a>{% endif %} 
 <hr>
 <h2>{{ user_profile.user.username }}'s Games</h2>
 {% for game in user_games %}
