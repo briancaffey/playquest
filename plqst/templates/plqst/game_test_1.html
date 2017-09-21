@@ -371,7 +371,12 @@ var start = function(){
     velocity:0.1
   });
 
-  // listen to events...
+  mc.on("panleft", function(ev){
+    ev.preventDefault();
+  });
+  mc.on("panright", function(ev){
+    ev.preventDefault();
+  });
   mc.on("swipeleft", function(ev) {
     ev.preventDefault();
     console.log("swiped left");
