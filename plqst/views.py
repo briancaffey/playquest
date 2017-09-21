@@ -49,7 +49,7 @@ def game_id_test(request, id):
 			}
 	else:
 		context = {}
-	return render(request, 'plqst/game_test.html', context)
+	return render(request, 'plqst/game_test_1.html', context)
 
 
 def create(request):
