@@ -371,7 +371,7 @@ var start = function(){
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere, {touchAction: 'auto'});
   // mc.add(new Hammer.Pan({ threshold: 300 }))
-  mc.get('pan').set({enable: false});
+
   mc.get('pinch').set({ enable: true });
   mc.get('swipe').set({
     direction: Hammer.DIRECTION_ALL,
@@ -380,12 +380,7 @@ var start = function(){
   });
 
 
-  function noscroll() {
-  window.scrollTo( 0, 0 );
-}
 
-// add listener to disable scroll
-window.addEventListener('scroll', noscroll);
 
   mc.get('pinch').set({ enable: true });
   // mc.on("panleft", function(ev){
