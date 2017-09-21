@@ -372,13 +372,7 @@ var start = function(){
   var mc = new Hammer(anywhere, {touchAction: 'auto'});
   // mc.add(new Hammer.Pan({ threshold: 300 }))
 
-  var isPinching = false;
-  bodyHammer.on("pinchstart", function(event){
-      isPinching = true;
-  });
-  bodyHammer.on("pinchend", function(event){
-      isPinching = false;
-  });
+
 
   mc.get('pan').set({enable: false});
   mc.get('pinch').set({ enable: true });
@@ -397,6 +391,14 @@ var start = function(){
   // mc.on("panmove", function(ev){
   //   ev.preventDefault();
   // })
+
+  var isPinching = false;
+  mc.on("pinchstart", function(event){
+      isPinching = true;
+  });
+  mc.on("pinchend", function(event){
+      isPinching = false;
+  });
 
   mc.on("swipeleft", function(ev) {
     if(isPinching){
