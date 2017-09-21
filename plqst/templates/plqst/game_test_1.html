@@ -369,7 +369,31 @@ var start = function(){
 
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var mc = new Hammer(anywhere, {touchAction : 'auto'});
+  var mc = new Hammer(anywhere, {touchAction : 'auto',     recognizers: [
+        [Hammer.Pan, { direction: Hammer.DIRECTION_HORIZONTAL }]
+    ]});
+
+
+    var isScrolling = false;
+
+// Making the event listener passive means we don't get any delays between
+// the user scrolling and the browser having checked if it should prevent
+// that event
+window.addEventListener('scroll', function() {
+    isScrolling = true;
+}, { passive: true });
+
+window.addEventListener('touchend', function() {
+    isScrolling = false;
+});
+
+mc.on('pan', function(event) {
+    if (isScrolling) {
+        return;
+    }
+
+    // Normal logic...
+});
 
   // mc.add(new Hammer.Pan({ threshold: 300 }))
   mc.get('pinch').set({ enable: true });
