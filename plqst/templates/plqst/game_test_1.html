@@ -153,7 +153,7 @@
 
 
 
-  <div style="background-color:#daefe8" class="container" id="main-canvas">
+  <div class="container">
     <div class="row">
 
       </div>
@@ -180,7 +180,14 @@
 
 <div style="padding-top:40px;">
 <div style="align:center;" class="canvas">
-  <table style="font-size:3.5em;" class="grid">
+  <style>
+  body {text-align:center;}
+  table.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+</style>
+  <table style="font-size:3.5em; background-color:#daefe8" class="grid center" id="main-canvas" >
     <tbody id="scene"></tbody>
   </table>
   <hr>
