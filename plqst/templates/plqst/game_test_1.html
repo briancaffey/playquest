@@ -380,6 +380,13 @@ var start = function(){
   });
 
 
+  function noscroll() {
+  window.scrollTo( 0, 0 );
+}
+
+// add listener to disable scroll
+window.addEventListener('scroll', noscroll);
+
   mc.get('pinch').set({ enable: true });
   // mc.on("panleft", function(ev){
   //   ev.preventDefault();
