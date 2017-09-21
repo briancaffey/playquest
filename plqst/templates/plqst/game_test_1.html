@@ -371,6 +371,15 @@ var start = function(){
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere, {touchAction: 'auto'});
   // mc.add(new Hammer.Pan({ threshold: 300 }))
+
+  var isPinching = false;
+  bodyHammer.on("pinchstart", function(event){
+      isPinching = true;
+  });
+  bodyHammer.on("pinchend", function(event){
+      isPinching = false;
+  });
+
   mc.get('pan').set({enable: false});
   mc.get('pinch').set({ enable: true });
   mc.get('swipe').set({
@@ -390,6 +399,9 @@ var start = function(){
   // })
 
   mc.on("swipeleft", function(ev) {
+    if(isPinching){
+    return;
+}
     ev.preventDefault();
     console.log("swiped left");
     var current = player.current[1];
@@ -401,6 +413,9 @@ var start = function(){
   });
 
   mc.on("swiperight", function(ev) {
+    if(isPinching){
+    return;
+}
     ev.preventDefault();
     console.log("swiped right");
     var current = player.current[1];
@@ -412,6 +427,9 @@ var start = function(){
   });
 
   mc.on("swipeup", function(ev) {
+    if(isPinching){
+    return;
+}
     ev.preventDefault();
     console.log("swipe up");
     var current = player.current[0];
@@ -423,6 +441,9 @@ var start = function(){
   });
 
   mc.on("swipedown", function(ev) {
+    if(isPinching){
+    return;
+}
     ev.preventDefault();
     console.log("swipe down");
     var current = player.current[0];
