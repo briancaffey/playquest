@@ -369,7 +369,7 @@ var start = function(){
 
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var mc = new Hammer(anywhere, {touchAction : 'pan-x pan-y'});
+  var mc = new Hammer(anywhere, {touchAction : 'pan-y'});
   mc.add(new Hammer.Pan({ threshold: 300 }))
   mc.get('pan').set({enable: false});
   mc.get('pinch').set({ enable: true });
