@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.models import UserProfile
+from django.http import HttpResponseRedirect
 
 from django.contrib import messages
 
@@ -23,7 +24,7 @@ def playquest_home(request):
     return render(request, 'plqst/playquest_home.html', context)
 
 def demo(request):
-	return reverse('plqst:game_id', args=['LbVgnYL'])
+	return HttpResponseRedirect("http://playquest.io/game/LbVgnYL/")
 
 def game_id(request, id):
 	game = Game.objects.filter(id=id)
