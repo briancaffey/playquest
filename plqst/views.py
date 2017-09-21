@@ -5,9 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.models import UserProfile
 from django.http import HttpResponseRedirect
-
 from django.contrib import messages
-
 # Create your views here.
 
 def playquest_home(request):
