@@ -23,7 +23,7 @@ def playquest_home(request):
     return render(request, 'plqst/playquest_home.html', context)
 
 def demo(request):
-	return reverse('plqst:game_id', args='LbVgnYL')
+	return reverse('plqst:game_id', args=['LbVgnYL'])
 
 def game_id(request, id):
 	game = Game.objects.filter(id=id)
