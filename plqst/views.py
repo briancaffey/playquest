@@ -24,7 +24,7 @@ def playquest_home(request):
     return render(request, 'plqst/playquest_home.html', context)
 
 def demo(request):
-	return HttpResponseRedirect("http://playquest.io/game/LbVgnYL/")
+	return HttpResponseRedirect("http://www.playquest.io/game/LbVgnYL/")
 
 def game_id(request, id):
 	game = Game.objects.filter(id=id)
