@@ -363,6 +363,7 @@ var start = function(){
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere, {touchAction : 'pan-x pan-y'});
 
+  mc.get('pinch').set({ enable: true });
   mc.get('swipe').set({
     direction: Hammer.DIRECTION_ALL,
     threshold: 1,
