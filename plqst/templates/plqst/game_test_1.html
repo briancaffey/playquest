@@ -372,6 +372,11 @@ var start = function(){
   var mc = new Hammer(anywhere);
   // mc.add(new Hammer.Pan({ threshold: 300 }))
 
+  mc.on("pinch", function(ev) {
+    console.log("Pinching");
+  	console.log(ev.scale);
+  });
+
   mc.get('pinch').set({ enable: true });
   mc.get('swipe').set({
     direction: Hammer.DIRECTION_ALL,
