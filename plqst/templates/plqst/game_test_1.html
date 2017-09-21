@@ -379,22 +379,11 @@ var start = function(){
     velocity:0.1
   });
 
-
-
-
   mc.get('pinch').set({ enable: true });
-  // mc.on("panleft", function(ev){
-  //   ev.preventDefault();
-  // });
-  // mc.on("panright", function(ev){
-  //   ev.preventDefault();
-  // });
-  // mc.on("panmove", function(ev){
+
+  // mc.on("panstart", function(ev){
   //   ev.preventDefault();
   // })
-  mc.on("panstart", function(ev){
-    ev.preventDefault();
-  })
 
   mc.on("swipeleft", function(ev) {
     ev.preventDefault();
