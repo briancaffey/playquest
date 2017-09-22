@@ -371,7 +371,13 @@ var start = function(){
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere, {touchAction: 'auto' });
   mc.add( new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }) );
-  mc.on("pan", function(ev){ev.preventDefault();});
+  mc.add(new Hammer.Swipe({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 1,
+    velocity:0.1
+  })).recognizeWith(mc.get('pan'));
+  mc.on('panstart panmove', function(ev) { ev.preventDefault(); console.log('working'); });
+  // mc.on("pan", function(ev){ev.preventDefault();});
   // mc.add(new Hammer.Pan({ threshold: 300 }))
   // mc.get('pan').set({threshold: 20 })
   mc.get('pinch').set({ enable: true });
@@ -380,11 +386,11 @@ var start = function(){
   	console.log(ev.scale);
   });
 
-  mc.get('swipe').set({
-    direction: Hammer.DIRECTION_ALL,
-    threshold: 1,
-    velocity:0.1
-  });
+  // mc.get('swipe').set({
+  //   direction: Hammer.DIRECTION_ALL,
+  //   threshold: 1,
+  //   velocity:0.1
+  // });
 
   mc.get('pinch').set({ enable: true });
 
