@@ -4,7 +4,7 @@
 <head>
   {% include 'google_analytics.html' %}
   <title>PlayQuest</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
   <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />
@@ -372,7 +372,7 @@ var start = function(){
   var mc = new Hammer(anywhere, {touchAction: 'auto' });
 
   // mc.add(new Hammer.Pan({ threshold: 300 }))
-  mc.get('pan').set({threshold: 20 })
+  // mc.get('pan').set({threshold: 20 })
   mc.get('pinch').set({ enable: true });
   mc.on("pinch", function(ev) {
     console.log("Pinching");
