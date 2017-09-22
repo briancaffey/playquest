@@ -305,8 +305,8 @@ function checkSquare(square){
   if ( square.dialogue || square.conditional_dialogue ) {
     if (square.hasOwnProperty("conditional_dialogue") && _.contains(player.keys, square.conditional_dialogue_key)){
 
-      $("#dialogue-title").text(square.conditional_dialogue_title);
-      $("#dialogue-body").text(square.conditional_dialogue_body);
+      $("#dialogue-title").html(square.conditional_dialogue_title);
+      $("#dialogue-body").html(square.conditional_dialogue_body);
       switch (square.voice) {
         case "0":
           console.log("no narration");
@@ -320,8 +320,8 @@ function checkSquare(square){
       }
 
     } else {
-    $("#dialogue-title").text(square.dialogue_title);
-    $("#dialogue-body").text(square.dialogue_body);
+    $("#dialogue-title").html(square.dialogue_title);
+    $("#dialogue-body").html(square.dialogue_body);
     switch (square.voice) {
       case "0":
         console.log("no narration");
@@ -366,37 +366,28 @@ function checkSquare(square){
 var start = function(){
 
   var anywhere = document.getElementById("main-canvas")
-
   // create a simple instance
   // by default, it only adds horizontal recognizers
   var mc = new Hammer(anywhere, {touchAction: 'auto' });
-  mc.add( new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }) );
+
+  mc.add( new Hammer.Pan({
+    direction: Hammer.DIRECTION_ALL,
+    threshold: 0 }) );
+
   mc.add(new Hammer.Swipe({
     direction: Hammer.DIRECTION_ALL,
     threshold: 1,
     velocity:0.1
   })).recognizeWith(mc.get('pan'));
+
   mc.on('panstart panmove', function(ev) { ev.preventDefault(); console.log('working'); });
-  // mc.on("pan", function(ev){ev.preventDefault();});
-  // mc.add(new Hammer.Pan({ threshold: 300 }))
-  // mc.get('pan').set({threshold: 20 })
+
   mc.get('pinch').set({ enable: true });
+
   mc.on("pinch", function(ev) {
     console.log("Pinching");
   	console.log(ev.scale);
   });
-
-  // mc.get('swipe').set({
-  //   direction: Hammer.DIRECTION_ALL,
-  //   threshold: 1,
-  //   velocity:0.1
-  // });
-
-  mc.get('pinch').set({ enable: true });
-
-  // mc.on("panstart", function(ev){
-  //   ev.preventDefault();
-  // })
 
   mc.on("swipeleft", function(ev) {
     ev.preventDefault();
