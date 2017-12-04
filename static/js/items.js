@@ -504,6 +504,7 @@ emoji_map =  [
   {
      'emoji': '🚪',
      'name':'door',
+     'wall':true,
 
    },
 
@@ -533,7 +534,7 @@ emoji_map =  [
   {
       'emoji': '🔮',
       'name':'orb',
-      'wall':false,
+      'wall':true,
     },
 
 
